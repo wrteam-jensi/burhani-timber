@@ -22,6 +22,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/product-gallery.css" rel="stylesheet">
 </head>
 
 <body>
@@ -144,22 +145,7 @@
                             </div>
                             <div class="col col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-magnifiying-glass"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-magnifiying-glass"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="close-form">
                                         <a class="theme-btn" href="contact.html">GET FREE QUOTE</a>
                                     </div>
@@ -195,14 +181,7 @@
                 <div class="row">
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
-                            <div class="widget search-widget">
-                                <form>
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search Post..">
-                                        <button type="submit"><i class="ti-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
+                          
                             <div class="widget category-widget">
                                 <h3>Power Tools & Safety Products</h3>
                                 <ul>
@@ -231,68 +210,138 @@
                             </div>
                         </div>
                         <div class="wpo-p-details-section">
-                            <h4>Power Tools & Safety Products Gallery</h4>
-                            <p>Explore our complete range of Power Tools & Safety products. We offer high-quality tools and safety equipment for all your construction and industrial needs.</p>
+                            <!-- Header Section with Title and Description -->
+                            <div class="product-gallery-header text-center mb-5">
+                                <h2 class="gallery-title">Power Tools & Safety Products Gallery</h2>
+                                <p class="gallery-description">Explore our complete range of Power Tools & Safety products. We offer high-quality tools and safety equipment for all your construction and industrial needs.</p>
+                            </div>
                             
-                            <!-- Product Images Grid -->
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Angle Grinder.jpg" alt="Angle Grinder">
-                                        <h5>Angle Grinder</h5>
+                            <!-- Product Cards Grid -->
+                            <div class="product-cards-container">
+                                <div class="row g-4">
+                                    <!-- Angle Grinder Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Angle Grinder.jpg" alt="Angle Grinder" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Angle Grinder</h5>
+                                                <p class="card-description">High-performance angle grinder for cutting and grinding</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Concrete Vibrator.jpg" alt="Concrete Vibrator">
-                                        <h5>Concrete Vibrator</h5>
+                                    
+                                    <!-- Concrete Vibrator Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Concrete Vibrator.jpg" alt="Concrete Vibrator" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Concrete Vibrator</h5>
+                                                <p class="card-description">Professional concrete vibrator for construction work</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Cut off machine.jpg" alt="Cut Off Machine">
-                                        <h5>Cut Off Machine</h5>
+                                    
+                                    <!-- Cut Off Machine Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Cut off machine.jpg" alt="Cut Off Machine" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Cut Off Machine</h5>
+                                                <p class="card-description">Heavy-duty cut off machine for precise cutting</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Drill Machine.jpg" alt="Drill Machine">
-                                        <h5>Drill Machine</h5>
+                                    
+                                    <!-- Drill Machine Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Drill Machine.jpg" alt="Drill Machine" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Drill Machine</h5>
+                                                <p class="card-description">Professional drill machine for construction drilling</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Generator.jpg" alt="Generator">
-                                        <h5>Generator</h5>
+                                    
+                                    <!-- Generator Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Generator.jpg" alt="Generator" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Generator</h5>
+                                                <p class="card-description">Reliable power generator for construction sites</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Ply cutting machine.jpg" alt="Ply Cutting Machine">
-                                        <h5>Ply Cutting Machine</h5>
+                                    
+                                    <!-- Ply Cutting Machine Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Ply cutting machine.jpg" alt="Ply Cutting Machine" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Ply Cutting Machine</h5>
+                                                <p class="card-description">Precision ply cutting machine for woodwork</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Safety Helmet.jpg" alt="Safety Helmet">
-                                        <h5>Safety Helmet</h5>
+                                    
+                                    <!-- Safety Helmet Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Safety Helmet.jpg" alt="Safety Helmet" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Safety Helmet</h5>
+                                                <p class="card-description">High-quality safety helmet for worker protection</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Welding Electrods.jpg" alt="Welding Electrodes">
-                                        <h5>Welding Electrodes</h5>
+                                    
+                                    <!-- Welding Electrodes Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Welding Electrods.jpg" alt="Welding Electrodes" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Welding Electrodes</h5>
+                                                <p class="card-description">Professional welding electrodes for metal work</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Powertools and safety/Welding Machine.jpg" alt="Welding Machine">
-                                        <h5>Welding Machine</h5>
+                                    
+                                    <!-- Welding Machine Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Powertools and safety/Welding Machine.jpg" alt="Welding Machine" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Welding Machine</h5>
+                                                <p class="card-description">Heavy-duty welding machine for construction</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <p>All our Power Tools & Safety products are manufactured to the highest quality standards and meet international safety requirements for construction and industrial applications.</p>
+                            <!-- Footer Description -->
+                            <div class="product-gallery-footer text-center mt-5">
+                                <p>All our Power Tools & Safety products are manufactured to the highest quality standards and meet international safety requirements for construction and industrial applications.</p>
+                            </div>
                    
                     </div>
                 </div>

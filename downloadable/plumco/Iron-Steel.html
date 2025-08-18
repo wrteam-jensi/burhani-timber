@@ -22,6 +22,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/product-gallery.css" rel="stylesheet">
 </head>
 
 <body>
@@ -143,22 +144,7 @@
                             </div>
                             <div class="col col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-magnifiying-glass"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-magnifiying-glass"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="close-form">
                                         <a class="theme-btn" href="contact.html">GET FREE QUOTE</a>
                                     </div>
@@ -194,14 +180,7 @@
                 <div class="row">
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
-                            <div class="widget search-widget">
-                                <form>
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search Post..">
-                                        <button type="submit"><i class="ti-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
+                           
                             <div class="widget category-widget">
                                 <h3>Iron & Steel Products</h3>
                                 <ul>
@@ -234,92 +213,190 @@
                             </div>
                         </div>
                         <div class="wpo-p-details-section">
-                            <h4>Iron & Steel Products Gallery</h4>
-                            <p>Explore our complete range of Iron & Steel products. We offer high-quality steel materials for all your construction and industrial needs.</p>
+                            <!-- Header Section with Title and Description -->
+                            <div class="product-gallery-header text-center mb-5">
+                                <h2 class="gallery-title">Iron & Steel Products Gallery</h2>
+                                <p class="gallery-description">Explore our complete range of Iron & Steel products. We offer high-quality steel materials for all your construction and industrial needs.</p>
+                            </div>
                             
-                            <!-- Product Images Grid -->
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/Gi Sheet.jpg" alt="GI Sheet">
-                                        <h5>GI Sheet</h5>
+                            <!-- Product Cards Grid -->
+                            <div class="product-cards-container">
+                                <div class="row g-4">
+                                    <!-- GI Sheet Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/Gi Sheet.jpg" alt="GI Sheet" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">GI Sheet</h5>
+                                                <p class="card-description">Galvanized Iron sheets for roofing and construction</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/ISA.jpg" alt="ISA">
-                                        <h5>ISA</h5>
+                                    
+                                    <!-- ISA Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/ISA.jpg" alt="ISA" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">ISA</h5>
+                                                <p class="card-description">Indian Standard Angle sections for structural support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/ISMB.jpg" alt="ISMB">
-                                        <h5>ISMB</h5>
+                                    
+                                    <!-- ISMB Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/ISMB.jpg" alt="ISMB" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">ISMB</h5>
+                                                <p class="card-description">Indian Standard Medium Weight Beams</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/ISMC.jpg" alt="ISMC">
-                                        <h5>ISMC</h5>
+                                    
+                                    <!-- ISMC Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/ISMC.jpg" alt="ISMC" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">ISMC</h5>
+                                                <p class="card-description">Indian Standard Medium Weight Channels</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/ISMC 2.jpg" alt="ISMC 2">
-                                        <h5>ISMC 2</h5>
+                                    
+                                    <!-- ISMC 2 Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/ISMC 2.jpg" alt="ISMC 2" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">ISMC 2</h5>
+                                                <p class="card-description">Medium weight channel sections for construction</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/ISMC 3.jpg" alt="ISMC 3">
-                                        <h5>ISMC 3</h5>
+                                    
+                                    <!-- ISMC 3 Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/ISMC 3.jpg" alt="ISMC 3" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">ISMC 3</h5>
+                                                <p class="card-description">Heavy-duty channel sections for industrial use</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/M S bars.jpg" alt="M S Bars">
-                                        <h5>M S Bars</h5>
+                                    
+                                    <!-- M S Bars Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/M S bars.jpg" alt="M S Bars" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Bars</h5>
+                                                <p class="card-description">Mild Steel bars for reinforcement and construction</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/M S Flat.jpg" alt="M S Flat">
-                                        <h5>M S Flat</h5>
+                                    
+                                    <!-- M S Flat Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/M S Flat.jpg" alt="M S Flat" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Flat</h5>
+                                                <p class="card-description">Mild Steel flat bars for various applications</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/M S Pipe.jpg" alt="M S Pipe">
-                                        <h5>M S Pipe</h5>
+                                    
+                                    <!-- M S Pipe Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/M S Pipe.jpg" alt="M S Pipe" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Pipe</h5>
+                                                <p class="card-description">Mild Steel pipes for plumbing and construction</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/M S Pipe(1).jpg" alt="M S Pipe (1)">
-                                        <h5>M S Pipe (1)</h5>
+                                    
+                                    <!-- M S Pipe (1) Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/M S Pipe(1).jpg" alt="M S Pipe (1)" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Pipe (1)</h5>
+                                                <p class="card-description">Additional Mild Steel pipe specifications</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/Steel Barbed wire.jpg" alt="Steel Barbed Wire">
-                                        <h5>Steel Barbed Wire</h5>
+                                    
+                                    <!-- Steel Barbed Wire Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/Steel Barbed wire.jpg" alt="Steel Barbed Wire" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Steel Barbed Wire</h5>
+                                                <p class="card-description">Security fencing wire with sharp barbs</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/TMT Bars.jpg" alt="TMT Bars">
-                                        <h5>TMT Bars</h5>
+                                    
+                                    <!-- TMT Bars Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/TMT Bars.jpg" alt="TMT Bars" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">TMT Bars</h5>
+                                                <p class="card-description">Thermo-Mechanically Treated reinforcement bars</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Iron & steel/Weldmesh.jpg" alt="Weldmesh">
-                                        <h5>Weldmesh</h5>
+                                    
+                                    <!-- Weldmesh Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Iron & steel/Weldmesh.jpg" alt="Weldmesh" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Weldmesh</h5>
+                                                <p class="card-description">Welded wire mesh for construction and fencing</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <p>All our Iron & Steel products are manufactured to the highest quality standards and meet international specifications for construction and industrial applications.</p>
+                            <!-- Footer Description -->
+                            <div class="product-gallery-footer text-center mt-5">
+                                <p>All our Iron & Steel products are manufactured to the highest quality standards and meet international specifications for construction and industrial applications.</p>
+                            </div>
                    
                     </div>
                 </div>

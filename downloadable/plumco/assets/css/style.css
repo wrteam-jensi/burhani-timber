@@ -3414,22 +3414,49 @@ hero slider
   background: #f5f8fe;
   border-radius: 20px;
   margin-bottom: 30px;
+  /* Make all cards the same height */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px; /* Set minimum height for consistency */
+}
+
+/* Reduce gap between columns */
+.wpo-service-section .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.wpo-service-section .col-lg-4,
+.wpo-service-section .col-md-6,
+.wpo-service-section .col-12 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .wpo-service-section .wpo-service-item .wpo-service-img {
   overflow: hidden;
   border-radius: 20px;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 .wpo-service-section .wpo-service-item .wpo-service-img img {
   width: 100%;
   border-radius: 20px;
   transform: scale(1);
   transition: all 0.3s;
+  height: 200px; /* Fixed height for all images */
+  object-fit: contain; /* Show full image without cropping */
+  object-position: center; /* Center the image */
+  background-color: #f8f9fa; /* Light background for transparent areas */
 }
 .wpo-service-section .wpo-service-item:hover .wpo-service-img img {
   transform: scale(1.2);
 }
 .wpo-service-section .wpo-service-item .wpo-service-text {
   padding: 40px 20px 15px;
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
 }
 @media (max-width: 1400px) {
   .wpo-service-section .wpo-service-item .wpo-service-text {
@@ -3456,6 +3483,7 @@ hero slider
 }
 .wpo-service-section .wpo-service-item .wpo-service-text p {
   margin-bottom: 25px;
+  flex: 1; /* Take available space for description */
 }
 @media (max-width: 1200px) {
   .wpo-service-section .wpo-service-item .wpo-service-text p {
@@ -3465,6 +3493,7 @@ hero slider
 .wpo-service-section .wpo-service-item .wpo-service-text a {
   color: #253041;
   font-weight: 700;
+  margin-top: auto; /* Push link to bottom */
 }
 .wpo-service-section .wpo-service-item .wpo-service-text a:hover {
   color: #0052da;
@@ -3475,6 +3504,12 @@ hero slider
 @media (max-width: 767px) {
   .wpo-service-section {
     padding-bottom: 70px;
+  }
+  .wpo-service-section .wpo-service-item {
+    min-height: 450px; /* Slightly smaller on mobile */
+  }
+  .wpo-service-section .wpo-service-item .wpo-service-img img {
+    height: 180px; /* Smaller image height on mobile */
   }
 }
 

@@ -22,6 +22,8 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/product-gallery.css" rel="stylesheet">
+ 
 </head>
 
 <body>
@@ -141,29 +143,7 @@
 
                                 </div><!-- end of nav-collapse -->
                             </div>
-                            <div class="col col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-magnifiying-glass"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-magnifiying-glass"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="close-form">
-                                        <a class="theme-btn" href="contact.html">GET FREE QUOTE</a>
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div>
                     </div><!-- end of container -->
                 </nav>
@@ -194,14 +174,7 @@
                 <div class="row">
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
-                            <div class="widget search-widget">
-                                <form>
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search Post..">
-                                        <button type="submit"><i class="ti-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
+                           
                             <div class="widget category-widget">
                                 <h3>Cuplock Scaffolding Products</h3>
                                 <ul>
@@ -234,92 +207,191 @@
                             </div>
                         </div>
                         <div class="wpo-p-details-section">
-                            <h4>Cuplock Scaffolding Products Gallery</h4>
-                            <p>Explore our complete range of Cuplock Scaffolding products. We offer high-quality scaffolding components for all your construction needs.</p>
+                            <!-- Header Section with Title and Description -->
+                            <div class="product-gallery-header text-center mb-5">
+                                <h2 class="gallery-title">Cuplock Scaffolding Products Gallery</h2>
+                                <p class="gallery-description">Explore our complete range of Cuplock Scaffolding products. We offer high-quality scaffolding components for all your construction needs.</p>
+                            </div>
                             
-                            <!-- Product Images Grid -->
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Base Jack.jpg" alt="Base Jack">
-                                        <h5>Base Jack</h5>
+                            <!-- Product Cards Grid -->
+                            <div class="product-cards-container">
+                                <div class="row g-4">
+                                    <!-- Base Jack Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Base Jack.jpg" alt="Base Jack" class="card-image">
+                                               
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Base Jack</h5>
+                                                <p class="card-description">Adjustable base support for scaffolding stability</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Fixed Coupler.jpg" alt="Fixed Coupler">
-                                        <h5>Fixed Coupler</h5>
+                                    
+                                    <!-- Fixed Coupler Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Fixed Coupler.jpg" alt="Fixed Coupler" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Fixed Coupler</h5>
+                                                <p class="card-description">Secure connection for scaffolding tubes</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Gogo Machine.jpg" alt="Gogo Machine">
-                                        <h5>Gogo Machine</h5>
+                                    
+                                    <!-- Gogo Machine Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Gogo Machine.jpg" alt="Gogo Machine" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Gogo Machine</h5>
+                                                <p class="card-description">Specialized equipment for scaffolding assembly</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Gogo Nut.jpg" alt="Gogo Nut">
-                                        <h5>Gogo Nut</h5>
+                                    
+                                    <!-- Gogo Nut Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Gogo Nut.jpg" alt="Gogo Nut" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Gogo Nut</h5>
+                                                <p class="card-description">Heavy-duty fastening component for scaffolding</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/H Frame.jpg" alt="H Frame">
-                                        <h5>H Frame</h5>
+                                    
+                                    <!-- H Frame Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/H Frame.jpg" alt="H Frame" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">H Frame</h5>
+                                                <p class="card-description">Main structural frame for cuplock scaffolding</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Joint Pin.jpg" alt="Joint Pin">
-                                        <h5>Joint Pin</h5>
+                                    
+                                    <!-- Joint Pin Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Joint Pin.jpg" alt="Joint Pin" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Joint Pin</h5>
+                                                <p class="card-description">Connecting pin for scaffolding joints</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Ledger.jpg" alt="Ledger">
-                                        <h5>Ledger</h5>
+                                    
+                                    <!-- Ledger Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Ledger.jpg" alt="Ledger" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Ledger</h5>
+                                                <p class="card-description">Horizontal support beams for scaffolding</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/M S Jali.jpg" alt="M S Jali">
-                                        <h5>M S Jali</h5>
+                                    
+                                    <!-- M S Jali Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/M S Jali.jpg" alt="M S Jali" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Jali</h5>
+                                                <p class="card-description">Metal mesh panels for scaffolding safety</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/M S Prop Jack.jpg" alt="M S Prop Jack">
-                                        <h5>M S Prop Jack</h5>
+                                    
+                                    <!-- M S Prop Jack Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/M S Prop Jack.jpg" alt="M S Prop Jack" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Prop Jack</h5>
+                                                <p class="card-description">Adjustable support jacks for scaffolding</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Prop Sleeve.jpg" alt="Prop Sleeve">
-                                        <h5>Prop Sleeve</h5>
+                                    
+                                    <!-- Prop Sleeve Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Prop Sleeve.jpg" alt="Prop Sleeve" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Prop Sleeve</h5>
+                                                <p class="card-description">Adjustable sleeve for prop support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Rapid Clamp.JPG" alt="Rapid Clamp">
-                                        <h5>Rapid Clamp</h5>
+                                    
+                                    <!-- Rapid Clamp Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Rapid Clamp.JPG" alt="Rapid Clamp" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Rapid Clamp</h5>
+                                                <p class="card-description">Quick-release clamping system</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/Swivel coupler.jpg" alt="Swivel Coupler">
-                                        <h5>Swivel Coupler</h5>
+                                    
+                                    <!-- Swivel Coupler Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/Swivel coupler.jpg" alt="Swivel Coupler" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Swivel Coupler</h5>
+                                                <p class="card-description">Rotating coupler for flexible connections</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Cuplock Scaffolding/U Jack.jpg" alt="U Jack">
-                                        <h5>U Jack</h5>
+                                    
+                                    <!-- U Jack Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Cuplock Scaffolding/U Jack.jpg" alt="U Jack" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">U Jack</h5>
+                                                <p class="card-description">U-shaped adjustable support jack</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <p>All our Cuplock Scaffolding products are manufactured to the highest quality standards and meet international safety requirements.</p>
+                            <!-- Footer Description -->
+                            <div class="product-gallery-footer text-center mt-5">
+                                <p>All our Cuplock Scaffolding products are manufactured to the highest quality standards and meet international safety requirements.</p>
+                            </div>
                    
                     </div>
                 </div>

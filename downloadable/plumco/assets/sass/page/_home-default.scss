@@ -249,14 +249,25 @@
         background:$section-bg-color;
         border-radius: 20px;
         margin-bottom: 30px;
+        /* Make all cards the same height */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 500px; /* Set minimum height for consistency */
+        
         .wpo-service-img{
             overflow: hidden;
             border-radius: 20px;
+            flex-shrink: 0; /* Prevent image from shrinking */
             img{
                 width: 100%;
                 border-radius: 20px;
                 transform: scale(1);
                 transition: all .3s;
+                height: 200px; /* Fixed height for all images */
+                object-fit: contain; /* Show full image without cropping */
+                object-position: center; /* Center the image */
+                background-color: #f8f9fa; /* Light background for transparent areas */
             }
         }
 
@@ -269,6 +280,10 @@
         }
         .wpo-service-text{
             padding: 40px 20px 15px;
+            flex: 1; /* Take remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute content evenly */
 
             @media(max-width:1400px){
                 padding: 40px 0px 15px; 
@@ -293,6 +308,7 @@
             }
             p{
                 margin-bottom: 25px;
+                flex: 1; /* Take available space for description */
 
                 @media(max-width:1200px){
                     margin-bottom: 15px;
@@ -302,6 +318,7 @@
             a{
                 color: $dark-gray;
                 font-weight: 700;
+                margin-top: auto; /* Push link to bottom */
 
                 &:hover{
                     color: $theme-primary-color;
@@ -311,10 +328,31 @@
                 }
             }
         }
+        
+        @media(max-width:767px){
+            min-height: 450px; /* Slightly smaller on mobile */
+            
+            .wpo-service-img img{
+                height: 180px; /* Smaller image height on mobile */
+            }
+        }
     }
 
     @media(max-width:767px){
       padding-bottom: 70px;
+    }
+    
+    /* Reduce gap between columns */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+        
+        .col-lg-4,
+        .col-md-6,
+        .col-12 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 }
 

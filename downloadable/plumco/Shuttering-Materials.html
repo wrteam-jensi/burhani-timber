@@ -24,65 +24,7 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <style>
-        /* Custom styles for Shuttering Materials page */
-        .product-description {
-            font-size: 14px;
-            color: #666;
-            margin-top: 10px;
-            line-height: 1.4;
-        }
-        
-        .wpo-p-details-img {
-            margin-bottom: 30px;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .wpo-p-details-img:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-        
-        .wpo-p-details-img h5 {
-            margin-top: 15px;
-            margin-bottom: 10px;
-            color: #333;
-            font-weight: 600;
-        }
-        
-        .product-features {
-            margin-top: 40px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        
-        .product-features h4 {
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
-        
-        .product-features ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .product-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .product-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .product-features strong {
-            color: #2563eb;
-        }
-    </style>
+    <link href="assets/css/product-gallery.css" rel="stylesheet">
 </head>
 
 <body>
@@ -205,22 +147,7 @@
                             </div>
                             <div class="col col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-magnifiying-glass"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-magnifiying-glass"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="close-form">
                                         <a class="theme-btn" href="contact.html">GET FREE QUOTE</a>
                                     </div>
@@ -256,14 +183,7 @@
                 <div class="row">
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
-                            <div class="widget search-widget">
-                                <form>
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search Post..">
-                                        <button type="submit"><i class="ti-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
+                           
                             <div class="widget category-widget">
                                 <h3>Shuttering Materials Products</h3>
                                 <ul>
@@ -300,142 +220,242 @@
                             </div>
                         </div>
                         <div class="wpo-p-details-section">
-                            <h4>Shuttering Materials Products Gallery</h4>
-                            <p>Explore our complete range of high-quality Shuttering Materials products. We offer premium formwork materials for all your construction and concrete work needs. Our products meet international quality standards and are designed for durability and reliability in demanding construction environments.</p>
+                            <!-- Header Section with Title and Description -->
+                            <div class="product-gallery-header text-center mb-5">
+                                <h2 class="gallery-title">Shuttering Materials Products Gallery</h2>
+                                <p class="gallery-description">Explore our complete range of high-quality Shuttering Materials products. We offer premium formwork materials for all your construction and concrete work needs.</p>
+                            </div>
                             
-                            <!-- Product Images Grid -->
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 col-12" id="anchor-nut">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Anchor Nut.jpg" alt="Anchor Nut - Shuttering Materials">
-                                        <h5>Anchor Nut</h5>
-                                        <p class="product-description">High-quality anchor nuts for secure formwork connections and structural stability.</p>
+                            <!-- Product Cards Grid -->
+                            <div class="product-cards-container">
+                                <div class="row g-4">
+                                    <!-- Anchor Nut Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Anchor Nut.jpg" alt="Anchor Nut" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Anchor Nut</h5>
+                                                <p class="card-description">High-quality anchor nuts for secure formwork connections</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="binding-wire">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Binding Wire.jpg" alt="Binding Wire - Shuttering Materials">
-                                        <h5>Binding Wire</h5>
-                                        <p class="product-description">Premium binding wire for reinforcement and formwork applications.</p>
+                                    
+                                    <!-- Binding Wire Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Binding Wire.jpg" alt="Binding Wire" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Binding Wire</h5>
+                                                <p class="card-description">Premium binding wire for reinforcement applications</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="cover-blocks">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Cover Blocks.jpg" alt="Cover Blocks - Shuttering Materials">
-                                        <h5>Cover Blocks</h5>
-                                        <p class="product-description">Precision cover blocks for maintaining proper concrete cover in construction.</p>
+                                    
+                                    <!-- Cover Blocks Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Cover Blocks.jpg" alt="Cover Blocks" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Cover Blocks</h5>
+                                                <p class="card-description">Precision cover blocks for proper concrete cover</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="lapha-patti">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Lapha Patti.jpg" alt="Lapha Patti - Shuttering Materials">
-                                        <h5>Lapha Patti</h5>
-                                        <p class="product-description">Durable lapha patti for formwork support and structural reinforcement.</p>
+                                    
+                                    <!-- Lapha Patti Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Lapha Patti.jpg" alt="Lapha Patti" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Lapha Patti</h5>
+                                                <p class="card-description">Durable lapha patti for formwork support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="ms-round-column">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/M S Round Column.jpg" alt="M S Round Column - Shuttering Materials">
-                                        <h5>M S Round Column</h5>
-                                        <p class="product-description">Mild steel round columns for circular formwork and structural support.</p>
+                                    
+                                    <!-- M S Round Column Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/M S Round Column.jpg" alt="M S Round Column" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Round Column</h5>
+                                                <p class="card-description">Mild steel round columns for circular formwork</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="ms-shuttering-plate">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/M S Shuttering Plate.jpg" alt="M S Shuttering Plate - Shuttering Materials">
-                                        <h5>M S Shuttering Plate</h5>
-                                        <p class="product-description">High-strength mild steel shuttering plates for concrete formwork.</p>
+                                    
+                                    <!-- M S Shuttering Plate Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/M S Shuttering Plate.jpg" alt="M S Shuttering Plate" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Shuttering Plate</h5>
+                                                <p class="card-description">High-strength mild steel shuttering plates</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="ms-sikanja">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/M S Sikanja.jpg" alt="M S Sikanja - Shuttering Materials">
-                                        <h5>M S Sikanja</h5>
-                                        <p class="product-description">Mild steel sikanja for formwork reinforcement and structural support.</p>
+                                    
+                                    <!-- M S Sikanja Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/M S Sikanja.jpg" alt="M S Sikanja" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">M S Sikanja</h5>
+                                                <p class="card-description">Mild steel sikanja for formwork reinforcement</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="nails">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Nails.jpg" alt="Nails - Shuttering Materials">
-                                        <h5>Nails</h5>
-                                        <p class="product-description">High-quality construction nails for formwork assembly and fastening.</p>
+                                    
+                                    <!-- Nails Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Nails.jpg" alt="Nails" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Nails</h5>
+                                                <p class="card-description">High-quality construction nails for formwork</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="pine-wood-runners">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Pine wood runners.jpg" alt="Pine Wood Runners - Shuttering Materials">
-                                        <h5>Pine Wood Runners</h5>
-                                        <p class="product-description">Premium pine wood runners for formwork support and alignment.</p>
+                                    
+                                    <!-- Pine Wood Runners Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Pine wood runners.jpg" alt="Pine Wood Runners" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Pine Wood Runners</h5>
+                                                <p class="card-description">Premium pine wood runners for formwork support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="shuttering-oil">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Shuttering Oil.jpg" alt="Shuttering Oil - Shuttering Materials">
-                                        <h5>Shuttering Oil</h5>
-                                        <p class="product-description">Specialized shuttering oil for easy formwork release and concrete surface finish.</p>
+                                    
+                                    <!-- Shuttering Oil Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Shuttering Oil.jpg" alt="Shuttering Oil" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Shuttering Oil</h5>
+                                                <p class="card-description">Specialized oil for easy formwork release</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="shuttering-plywood">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Shuttering Plywood.JPG" alt="Shuttering Plywood - Shuttering Materials">
-                                        <h5>Shuttering Plywood</h5>
-                                        <p class="product-description">High-grade shuttering plywood for smooth concrete surfaces and multiple reuses.</p>
+                                    
+                                    <!-- Shuttering Plywood Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Shuttering Plywood.JPG" alt="Shuttering Plywood" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Shuttering Plywood</h5>
+                                                <p class="card-description">High-grade plywood for smooth concrete surfaces</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="tie-rod">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Tie Rod.jpg" alt="Tie Rod - Shuttering Materials">
-                                        <h5>Tie Rod</h5>
-                                        <p class="product-description">Durable tie rods for securing formwork panels and maintaining concrete thickness.</p>
+                                    
+                                    <!-- Tie Rod Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Tie Rod.jpg" alt="Tie Rod" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Tie Rod</h5>
+                                                <p class="card-description">Durable tie rods for securing formwork panels</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="wooden-balli">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Wooden balli.jpg" alt="Wooden Balli - Shuttering Materials">
-                                        <h5>Wooden Balli</h5>
-                                        <p class="product-description">Traditional wooden balli for formwork support and structural reinforcement.</p>
+                                    
+                                    <!-- Wooden Balli Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Wooden balli.jpg" alt="Wooden Balli" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Wooden Balli</h5>
+                                                <p class="card-description">Traditional wooden balli for formwork support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="wooden-chavi-2">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Wooden chavi 2.JPG" alt="Wooden Chavi 2 - Shuttering Materials">
-                                        <h5>Wooden Chavi 2</h5>
-                                        <p class="product-description">Premium wooden chavi for formwork connections and structural support.</p>
+                                    
+                                    <!-- Wooden Chavi 2 Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Wooden chavi 2.JPG" alt="Wooden Chavi 2" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Wooden Chavi 2</h5>
+                                                <p class="card-description">Premium wooden chavi for formwork connections</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="wooden-chavi">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Wooden Chavi.JPG" alt="Wooden Chavi - Shuttering Materials">
-                                        <h5>Wooden Chavi</h5>
-                                        <p class="product-description">High-quality wooden chavi for formwork assembly and structural connections.</p>
+                                    
+                                    <!-- Wooden Chavi Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Wooden Chavi.JPG" alt="Wooden Chavi" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Wooden Chavi</h5>
+                                                <p class="card-description">High-quality wooden chavi for formwork assembly</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="wooden-patiya-2">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Wooden Patiya 2.jpg" alt="Wooden Patiya 2 - Shuttering Materials">
-                                        <h5>Wooden Patiya 2</h5>
-                                        <p class="product-description">Durable wooden patiya for formwork support and structural reinforcement.</p>
+                                    
+                                    <!-- Wooden Patiya 2 Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Wooden Patiya 2.jpg" alt="Wooden Patiya 2" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Wooden Patiya 2</h5>
+                                                <p class="card-description">Durable wooden patiya for formwork support</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 col-12" id="wooden-patiya">
-                                    <div class="wpo-p-details-img">
-                                        <img src="assets/images/client image work/Shuttering Materials/Wooden Patiya.JPG" alt="Wooden Patiya - Shuttering Materials">
-                                        <h5>Wooden Patiya</h5>
-                                        <p class="product-description">Premium wooden patiya for formwork connections and structural support.</p>
+                                    
+                                    <!-- Wooden Patiya Card -->
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="product-card">
+                                            <div class="card-image-wrapper">
+                                                <img src="assets/images/client image work/Shuttering Materials/Wooden Patiya.JPG" alt="Wooden Patiya" class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">Wooden Patiya</h5>
+                                                <p class="card-description">Premium wooden patiya for formwork connections</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <p>All our Shuttering Materials products are manufactured to the highest quality standards and meet international specifications for construction and formwork applications. We provide comprehensive solutions for all your formwork needs, ensuring durability, reliability, and cost-effectiveness for your construction projects.</p>
-                            
-                            <div class="product-features">
-                                <h4>Why Choose Our Shuttering Materials?</h4>
-                                <ul>
-                                    <li><strong>Quality Assurance:</strong> All products meet international quality standards</li>
-                                    <li><strong>Durability:</strong> Designed for multiple reuses and long service life</li>
-                                    <li><strong>Cost-Effective:</strong> Competitive pricing with superior quality</li>
-                                    <li><strong>Technical Support:</strong> Expert guidance for proper product selection</li>
-                                    <li><strong>Timely Delivery:</strong> Fast and reliable delivery across the region</li>
+                            <!-- Footer Description -->
+                            <div class="product-gallery-footer text-center mt-5">
+                                <p>All our Shuttering Materials products are manufactured to the highest quality standards and meet international specifications for construction and formwork applications.</p>
+                            </div>
                                 </ul>
                             </div>
                    
