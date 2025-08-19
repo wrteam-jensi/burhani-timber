@@ -751,3 +751,201 @@
 
 
 })(window.jQuery);
+
+// Enhanced Product Categories Section Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Image loading animation for product category cards
+    const productImages = document.querySelectorAll('.wpo-service-section .wpo-service-img img');
+    
+    productImages.forEach(img => {
+        // Check if image is already loaded
+        if (img.complete && img.naturalHeight !== 0) {
+            img.classList.add('loaded');
+        } else {
+            // Add loading state only if image is not already loaded
+            img.style.opacity = '0.8'; // Start with slightly transparent instead of completely invisible
+            
+            // Handle image load
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+                this.classList.add('loaded');
+            });
+            
+            // Handle image error
+            img.addEventListener('error', function() {
+                this.style.opacity = '1';
+                this.style.filter = 'grayscale(100%)';
+                this.style.opacity = '0.5';
+                console.warn('Image failed to load:', this.src);
+            });
+        }
+    });
+    
+    // Smooth scroll for category links
+    const categoryLinks = document.querySelectorAll('.wpo-service-section .cta-link');
+    
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add click animation
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+    
+    // Intersection Observer for animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe product category cards
+    const productCards = document.querySelectorAll('.wpo-service-section .wpo-service-item');
+    productCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Enhanced hover effects for category cards
+    productCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            // Add subtle glow effect
+            this.style.boxShadow = '0 20px 40px rgba(37, 99, 235, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            // Remove glow effect
+            this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+        });
+    });
+    
+    // Category feature tags animation
+    const featureTags = document.querySelectorAll('.wpo-service-section .feature-tag');
+    
+    featureTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Category icon animation
+    const categoryIcons = document.querySelectorAll('.wpo-service-section .category-icon');
+    
+    categoryIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    });
+    
+    // Smooth scroll for CTA button
+    const ctaButton = document.querySelector('.wpo-service-section .category-cta .btn');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(e) {
+            // Add click animation
+            this.style.transform = 'translateY(-2px) scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-2px) scale(1)';
+            }, 150);
+        });
+    }
+    
+    // Add loading skeleton for images
+    function createImageSkeleton() {
+        const imageContainers = document.querySelectorAll('.wpo-service-section .wpo-service-img');
+        
+        imageContainers.forEach(container => {
+            const skeleton = document.createElement('div');
+            skeleton.className = 'image-skeleton';
+            skeleton.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+                background-size: 200% 100%;
+                animation: loading 1.5s infinite;
+                border-radius: 24px 24px 0 0;
+                z-index: 1;
+            `;
+            
+            container.appendChild(skeleton);
+            
+            // Remove skeleton when image loads
+            const img = container.querySelector('img');
+            if (img) {
+                img.addEventListener('load', () => {
+                    skeleton.remove();
+                });
+            }
+        });
+    }
+    
+    // Add loading animation keyframes
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Initialize image skeletons
+    createImageSkeleton();
+    
+    // Add keyboard navigation support
+    productCards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const link = this.querySelector('.cta-link');
+                if (link) {
+                    link.click();
+                }
+            }
+        });
+    });
+    
+    // Performance optimization: Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        const lazyImages = document.querySelectorAll('.wpo-service-section .wpo-service-img img[loading="lazy"]');
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+});
