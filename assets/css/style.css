@@ -1452,7 +1452,8 @@ a:hover {
     position: relative;
   }
 
-  .wpo-site-header #navbar > ul > li > a:before {
+  .wpo-site-header #navbar > ul > li > a:before,
+  .wpo-site-header #navbar > ul > li > span.dropdown-toggle:before {
     position: absolute;
     left: 0;
     top: 50%;
@@ -1469,7 +1470,9 @@ a:hover {
   }
 
   .wpo-site-header #navbar > ul > li > a:hover:before,
-.wpo-site-header #navbar > ul > li > a.active:before {
+  .wpo-site-header #navbar > ul > li > a.active:before,
+  .wpo-site-header #navbar > ul > li > span.dropdown-toggle:hover:before,
+  .wpo-site-header #navbar > ul > li > span.dropdown-toggle.active:before {
     opacity: 1;
     visibility: visible;
   }
@@ -1926,7 +1929,8 @@ a:hover {
   .wpo-site-header #navbar li {
     position: relative;
   }
-  .wpo-site-header #navbar > ul > li > a {
+  .wpo-site-header #navbar > ul > li > a,
+  .wpo-site-header #navbar > ul > li > span.dropdown-toggle {
     font-size: 18px;
     padding: 35px 20px;
     display: block;
@@ -1934,6 +1938,7 @@ a:hover {
     font-weight: 800;
     position: relative;
     z-index: 1;
+    cursor: pointer;
   }
   .wpo-site-header #navbar > ul .sub-menu {
     background-color: #fff;

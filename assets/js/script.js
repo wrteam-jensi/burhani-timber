@@ -47,7 +47,7 @@
         var smallNav = $(".navigation-holder > .small-nav");
         var subMenu = smallNav.find(".sub-menu");
         var megamenu = smallNav.find(".mega-menu");
-        var menuItemWidthSubMenu = smallNav.find(".menu-item-has-children > a");
+        var menuItemWidthSubMenu = smallNav.find(".menu-item-has-children > a, .menu-item-has-children > span.dropdown-toggle");
 
         if (windowWidth <= 991) {
             subMenu.hide();
