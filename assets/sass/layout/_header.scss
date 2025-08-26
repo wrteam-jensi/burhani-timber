@@ -163,8 +163,8 @@
 }
 
 .wpo-site-header .navigation {
-	box-shadow: 0 -5px 15px #086ad84a;
-	background-color: #fff;
+	box-shadow: 0 -5px 15px rgba(177, 136, 87, 0.3);
+	background-color: var(--theme-color-bg_color);
 	margin-bottom: 0;
 	padding: 0;
 	border: 0;
@@ -189,8 +189,8 @@
 	  -o-transition: all 1s;
 	  -ms-transition: all 1s;
 	  transition: all 1s;
-	  -webkit-box-shadow: 0 -5px 15px #086ad84a;
-    box-shadow: 0 -5px 15px #086ad84a;
+	  -webkit-box-shadow: 0 -5px 15px rgba(177, 136, 87, 0.3);
+    box-shadow: 0 -5px 15px rgba(177, 136, 87, 0.3);
   }
   
   .sticky-on {
@@ -462,7 +462,7 @@
   .wpo-site-header .header-right .search-toggle-btn {
 	background-color: $theme-primary-color;
 	line-height: 0.66em;
-	color: #232f4b;
+	color: var(--theme-color-text_dark);
 	width: 55px;
 	height: 50px;
 	border: 0;
@@ -742,14 +742,14 @@
 				font-size: 18px;
 				padding: 35px 20px;
 				display: block;
-				color: #232f4b;
+				color: var(--theme-color-text_dark);
 				font-weight: 800;
 				position: relative;
 				z-index: 1;
 			}
 
 			> ul .sub-menu {
-				background-color: #fff;
+				background-color: var(--theme-color-bg_color);
 				box-shadow: 0px 2px 20px 0px rgba(62, 65, 159, 0.09);
 				width: 220px;
 				position: absolute;
@@ -767,7 +767,7 @@
 				font-size: calc-rem-value(15);
 				display: block;
 				padding: 10px 18px;
-				color: $dark-gray;
+				color: var(--theme-color-text_dark);
 				position: relative;
 				overflow: hidden;
 				font-weight: 700;

@@ -4,6 +4,36 @@ html {
 }
 :root {
     scroll-behavior: unset;
+    
+    /* Theme Color Variables */
+    --theme-color-bg_color: #F0EDDF;
+    --theme-color-bd_color: #D2CCB4;
+    --theme-color-text: #716A60;
+    --theme-color-text_light: #8B857D;
+    --theme-color-text_dark: #504037;
+    --theme-color-text_link: #B18857;
+    --theme-color-text_hover: #956935;
+    --theme-color-text_link2: #917E67;
+    --theme-color-text_hover2: #776753;
+    --theme-color-text_link3: #F6B110;
+    --theme-color-text_hover3: #E1A008;
+    --theme-color-alter_bg_color: #E9E4D0;
+    --theme-color-alter_bg_hover: #E3DEC8;
+    --theme-color-alter_bd_color: #D2CCB4;
+    --theme-color-alter_bd_hover: #C7C1AA;
+    --theme-color-alter_text: #716A60;
+    --theme-color-alter_light: #8B857D;
+    --theme-color-alter_dark: #504037;
+    --theme-color-alter_link: #B18857;
+    --theme-color-alter_hover: #956935;
+    --theme-color-alter_link2: #917E67;
+    --theme-color-alter_hover2: #776753;
+    --theme-color-alter_link3: #F6B110;
+    --theme-color-alter_hover3: #E1A008;
+    --theme-color-extra_bg_color: #000912;
+    --theme-color-extra_bg_hover: #433E39;
+    --theme-color-extra_bd_color: #514B45;
+    --theme-color-extra_bd_hover: #605953;
 }
 body {
     font-family: $base-font;
