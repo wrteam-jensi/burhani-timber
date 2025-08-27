@@ -948,4 +948,102 @@ document.addEventListener('DOMContentLoaded', function() {
             imageObserver.observe(img);
         });
     }
+
+    // Enhanced Product Category Cards Functionality
+    function enhancedProductCards() {
+        const productCards = document.querySelectorAll('.product-category-card');
+        
+        productCards.forEach(card => {
+            // Add loading state on card click
+            card.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href && href !== '#') {
+                    // Add loading state
+                    this.classList.add('loading');
+                    
+                    // Small delay to show loading animation
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 300);
+                }
+            });
+
+            // Enhanced hover effects
+            card.addEventListener('mouseenter', function() {
+                // Add subtle scale effect
+                this.style.transform = 'translateY(-12px) scale(1.02)';
+                
+                // Add ripple effect to icon
+                const icon = this.querySelector('.category-icon');
+                if (icon) {
+                    const ripple = document.createElement('div');
+                    ripple.className = 'ripple-effect';
+                    ripple.style.cssText = `
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        background: rgba(255,255,255,0.3);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
+                        animation: ripple 0.6s ease-out;
+                        pointer-events: none;
+                    `;
+                    icon.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                }
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+
+            // Add keyboard navigation support
+            card.setAttribute('tabindex', '0');
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+
+            // Add touch feedback for mobile devices
+            card.addEventListener('touchstart', function() {
+                this.classList.add('touch-active');
+            });
+
+            card.addEventListener('touchend', function() {
+                const card = this;
+                setTimeout(() => {
+                    card.classList.remove('touch-active');
+                }, 150);
+            });
+        });
+
+        // Add ripple animation keyframes
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                }
+            }
+            
+            .product-category-card.touch-active {
+                transform: translateY(-8px) scale(1.01) !important;
+                transition: all 0.15s ease !important;
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+    }
+
+    // Initialize enhanced product cards
+    enhancedProductCards();
 });
