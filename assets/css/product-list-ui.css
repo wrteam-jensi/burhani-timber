@@ -65,15 +65,16 @@
 
 .product-list-search input {
     width: 100%;
-    padding: 1rem 1.2rem;
+    padding: 1rem 3rem 1rem 1.2rem; /* Added right padding for icon */
     border: 2px solid var(--theme-color-bd_color);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.95);
-    color: var(--theme-color-text);
+    color: #333333; /* Dark text color for visibility */
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .product-list-search input::placeholder {
@@ -86,19 +87,29 @@
     border-color: var(--theme-color-text_link);
     box-shadow: 0 6px 20px rgba(177, 136, 87, 0.2);
     transform: translateY(-1px);
+    background: rgba(255, 255, 255, 1);
+    color: #000000; /* Darker text color when focused */
+}
+
+/* Search icon animation on focus */
+.product-list-search input:focus + .product-list-search::before {
+    color: var(--theme-color-text_link);
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Search icon */
 .product-list-search::before {
-    content: '🔍';
+    content: '\f002';
+    font-family: 'FontAwesome';
     position: absolute;
-    right: 1rem;
+    right: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.1rem;
     color: var(--theme-color-text_link);
     pointer-events: none;
     z-index: 2;
+    font-weight: 900;
 }
 
 /* Product List */
