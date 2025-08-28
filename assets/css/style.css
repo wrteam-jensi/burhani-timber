@@ -2633,12 +2633,13 @@ a:hover {
 hero slider
 --------------------------------------------------------------*/
 .wpo-hero-section-1 {
-  background: url(../images/main-bg.jpg) no-repeat right center;
+  background: url(../images/front13.png);
   height: 1050px;
   position: relative;
   display: block;
 }
 .wpo-hero-section-1:before {
+  
   display: none;
 }
 .wpo-hero-section-1 .right-vec {
@@ -2673,8 +2674,9 @@ hero slider
   }
 }
 .wpo-hero-section-1 .right-vec .right-img img {
-  width: 100%;
-  height: unset;
+  width: 100% !important;
+  height: 1050px !important;
+  object-fit: cover;
 }
 
 .wpo-hero-slider {
