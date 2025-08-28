@@ -25,6 +25,7 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/product-gallery.css" rel="stylesheet">
+    <link href="assets/css/product-list-ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img height="50px" width="50px" src="assets/images/wood.png" alt="">
                 </div>
             </div>
         </div>
@@ -149,18 +150,42 @@
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
                           
-                            <div class="widget category-widget">
-                                <h3>Power Tools & Safety Products</h3>
-                                <ul>
-                                    <li><a href="#angle-grinder" class="product-link">Angle Grinder</a></li>
-                                    <li><a href="#concrete-vibrator" class="product-link">Concrete Vibrator</a></li>
-                                    <li><a href="#cut-off-machine" class="product-link">Cut Off Machine</a></li>
-                                    <li><a href="#drill-machine" class="product-link">Drill Machine</a></li>
-                                    <li><a href="#generator" class="product-link">Generator</a></li>
-                                    <li><a href="#ply-cutting-machine" class="product-link">Ply Cutting Machine</a></li>
-                                    <li><a href="#safety-helmet" class="product-link">Safety Helmet</a></li>
-                                    <li><a href="#welding-electrodes" class="product-link">Welding Electrodes</a></li>
-                                    <li><a href="#welding-machine" class="product-link">Welding Machine</a></li>
+                            <div class="product-list-container">
+                                <h3 class="product-list-title">Power Tools & Safety Products</h3>
+                                
+                                <!-- Search functionality -->
+                                <div class="product-list-search">
+                                    <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off">
+                                </div>
+                                
+                                <ul class="product-list">
+                                    <li class="product-list-item">
+                                        <a href="#angle-grinder" class="product-link" data-count="1">Angle Grinder</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#concrete-vibrator" class="product-link" data-count="2">Concrete Vibrator</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#cut-off-machine" class="product-link" data-count="3">Cut Off Machine</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#drill-machine" class="product-link" data-count="4">Drill Machine</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#generator" class="product-link" data-count="5">Generator</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ply-cutting-machine" class="product-link" data-count="6">Ply Cutting Machine</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#safety-helmet" class="product-link" data-count="7">Safety Helmet</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#welding-electrodes" class="product-link" data-count="8">Welding Electrodes</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#welding-machine" class="product-link" data-count="9">Welding Machine</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="wpo-contact-widget widget">
@@ -324,12 +349,15 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget about-widget">
                                 <div class="logo widget-title">
-                                    <img src="assets/images/logo2.png" alt="blog">
+                                    <div class="navbar-header" style="text-align: center;">
+                                        <a class="navbar-brand" href="index.html" style="display: block; text-align: center;">
+                                            <h2 style="margin: 0; color: #2563eb; font-weight: bold; text-align: center;">Burhani Timber</h2>
+                                            <p style="margin: 0; color: #ffff; font-size: 14px; text-align: center;">Construction Materials & Timber</p>
+                                        </a>
+                                    </div>
                                 </div>
                                 <p>Burhani Timber is a trusted supplier of premium timber and construction materials, delivering quality products and reliable service to the construction industry.</p>
-                                
-                                  
-                                </ul>
+                               
                             </div>
                         </div>
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
@@ -339,7 +367,7 @@
                                 </div>
                                 <div class="contact-ft">
                                     <ul>
-                                            <li><i class="fi flaticon-location"></i>BURHANI TIMBERS , near kasamsha phir dargah, madhapar highway, bhuj kutch , 370020</li>
+                                        <li><i class="fi flaticon-location"></i>BURHANI TIMBERS , near kasamsha phir dargah, madhapar highway, bhuj kutch , 370020</li>
                                         <li><i class="fi flaticon-phone-call"></i>+91 9429426900</li>
                                         <li><i class="fi flaticon-send"></i> kaizar.bohra@yahoo.com</li>
                                     </ul>
@@ -349,11 +377,11 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget link-widget">
                                 <div class="widget-title">
-                                    <h3>Products </h3>
+                                    <h3>Products</h3>
                                 </div>
                                 <ul>
                                     <li><a href="Cuplock-Scaffolding.html">Cuplock Scaffolding</a></li>
-                                    <li><a href="Iron-Steel.html">Iron & Steel</a></li> 
+                                    <li><a href="Iron-Steel.html">Iron & Steel</a></li>
                                     <li><a href="Power-Tools-and-Safety.html">Power Tools & Safety</a></li>
                                     <li><a href="Shuttering-Materials.html">Shuttering Materials</a></li>
                                     <li><a href="Other.html">Other</a></li>
@@ -364,10 +392,10 @@
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget instagram">
                                 <div class="widget-title">
-                                    <h3>Projects</h3>
+                                    <h3>Products Categories</h3>
                                 </div>
                                 <ul class="d-flex">
-                                    <li><a href="Cuplock-Scaffolding.html"><img src="assets/images/client image work/Cuplock Scaffolding/Prop Sleeve.webp " alt="" style="width: 80px !important; height: 80px !important; object-fit: cover !important; object-position: center !important; border-radius: 4px; display: block !important; max-width: 80px !important; max-height: 80px !important;"></a></li>
+                                <li><a href="Cuplock-Scaffolding.html"><img src="assets/images/client image work/Cuplock Scaffolding/Prop Sleeve.webp " alt="" style="width: 80px !important; height: 80px !important; object-fit: cover !important; object-position: center !important; border-radius: 4px; display: block !important; max-width: 80px !important; max-height: 80px !important;"></a></li>
                                     <li><a href="Iron-Steel.html"><img src="assets/images/client image work/Iron & steel/ISA.webp" alt="" style="width: 80px !important; height: 80px !important; object-fit: cover !important; object-position: center !important; border-radius: 4px; display: block !important; max-width: 80px !important; max-height: 80px !important;"></a></li>
                                     <li><a href="Power-Tools-and-Safety.html"><img src="assets/images/client image work/Powertools and safety/Angle Grinder.webp" alt="" style="width: 80px !important; height: 80px !important; object-fit: cover !important; object-position: center !important; border-radius: 4px; display: block !important; max-width: 80px !important; max-height: 80px !important;"></a></li>
                                     <li><a href="Shuttering-Materials.html"><img src="assets/images/client image work/Shuttering Materials/Cover Blocks.webp" alt="" style="width: 80px !important; height: 80px !important; object-fit: cover !important; object-position: center !important; border-radius: 4px; display: block !important; max-width: 80px !important; max-height: 80px !important;"></a></li>
@@ -396,12 +424,21 @@
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
     
-    <!-- Product Navigation Script -->
+    <!-- Enhanced Product Navigation Script -->
     <script>
         // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Get all product links in the sidebar
             const productLinks = document.querySelectorAll('.product-link');
+            const productListContainer = document.querySelector('.product-list-container');
+            
+            // Add loading animation
+            productListContainer.classList.add('loading');
+            
+            // Remove loading after animation delay
+            setTimeout(function() {
+                productListContainer.classList.remove('loading');
+            }, 2000);
             
             // Add click event listener to each product link
             productLinks.forEach(function(link) {
@@ -446,6 +483,123 @@
                         }, 3000);
                     }
                 });
+                
+                // Add hover effect for better UX
+                link.addEventListener('mouseenter', function() {
+                    // Add subtle animation
+                    this.style.transform = 'translateX(3px) scale(1.02)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    // Reset transform if not active
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateX(0) scale(1)';
+                    }
+                });
+            });
+            
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                const activeLink = document.querySelector('.product-link.active');
+                if (!activeLink) return;
+                
+                const currentIndex = Array.from(productLinks).indexOf(activeLink);
+                let newIndex = currentIndex;
+                
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        newIndex = Math.min(currentIndex + 1, productLinks.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        newIndex = Math.max(currentIndex - 1, 0);
+                        break;
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        activeLink.click();
+                        return;
+                }
+                
+                if (newIndex !== currentIndex) {
+                    productLinks[newIndex].click();
+                }
+            });
+            
+            // Add scroll spy functionality
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -20% 0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        const correspondingLink = document.querySelector(`[href="#${targetId}"]`);
+                        
+                        if (correspondingLink) {
+                            // Remove active class from all links
+                            productLinks.forEach(function(l) {
+                                l.classList.remove('active');
+                            });
+                            
+                            // Add active class to corresponding link
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all product cards
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                observer.observe(card);
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('productSearch');
+            const productListItems = document.querySelectorAll('.product-list-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                productListItems.forEach(function(item) {
+                    const productName = item.querySelector('.product-link').textContent.toLowerCase();
+                    const isVisible = productName.includes(searchTerm);
+                    
+                    if (isVisible) {
+                        item.classList.remove('hidden');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Update counter badges
+                updateCounterBadges();
+            });
+            
+            // Function to update counter badges
+            function updateCounterBadges() {
+                const visibleItems = document.querySelectorAll('.product-list-item:not(.hidden)');
+                visibleItems.forEach(function(item, index) {
+                    const link = item.querySelector('.product-link');
+                    link.setAttribute('data-count', index + 1);
+                });
+            }
+            
+            // Add smooth scroll to top when search is cleared
+            searchInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    const productListContainer = document.querySelector('.product-list-container');
+                    productListContainer.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>

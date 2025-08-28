@@ -25,6 +25,7 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/product-gallery.css" rel="stylesheet">
+    <link href="assets/css/product-list-ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img height="50px" width="50px" src="assets/images/wood.png" alt="">
                 </div>
             </div>
         </div>
@@ -84,8 +85,8 @@
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header" style="text-align: center;">
                                     <a class="navbar-brand" href="index.html" style="display: block; text-align: center;">
-                                        <h2 style="margin: 0; color: #504037; font-weight: bold; text-align: center;">Burhani Timber</h2>
-                                        <p style="margin: 0; color: #504037; font-size: 14px; text-align: center;">Shuttering & Project Material Supplier</p>
+                                        <h2 style="margin: 0; color: var(--theme-color-text_dark); font-weight: bold; text-align: center;">Burhani Timber</h2>
+                                        <p style="margin: 0; color: var(--theme-color-text_dark); font-size: 14px; text-align: center;">Shuttering & Project Material Supplier</p>
                                     </a>
                                 </div>
                             </div>
@@ -149,22 +150,54 @@
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
                            
-                            <div class="widget category-widget">
-                                <h3>Iron & Steel Products</h3>
-                                <ul>
-                                    <li><a href="#gi-sheet" class="product-link">GI Sheet</a></li>
-                                    <li><a href="#isa" class="product-link">ISA</a></li>
-                                    <li><a href="#ismb" class="product-link">ISMB</a></li>
-                                    <li><a href="#ismc" class="product-link">ISMC</a></li>
-                                    <li><a href="#ismc-2" class="product-link">ISMC 2</a></li>
-                                    <li><a href="#ismc-3" class="product-link">ISMC 3</a></li>
-                                    <li><a href="#ms-bars" class="product-link">M S Bars</a></li>
-                                    <li><a href="#ms-flat" class="product-link">M S Flat</a></li>
-                                    <li><a href="#ms-pipe" class="product-link">M S Pipe</a></li>
-                                    <li><a href="#ms-pipe-1" class="product-link">M S Pipe (1)</a></li>
-                                    <li><a href="#steel-barbed-wire" class="product-link">Steel Barbed Wire</a></li>
-                                    <li><a href="#tmt-bars" class="product-link">TMT Bars</a></li>
-                                    <li><a href="#weldmesh" class="product-link">Weldmesh</a></li>
+                            <div class="product-list-container">
+                                <h3 class="product-list-title">Iron & Steel Products</h3>
+                                
+                                <!-- Search functionality -->
+                                <div class="product-list-search">
+                                    <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off">
+                                </div>
+                                
+                                <ul class="product-list">
+                                    <li class="product-list-item">
+                                        <a href="#gi-sheet" class="product-link" data-count="1">GI Sheet</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#isa" class="product-link" data-count="2">ISA</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ismb" class="product-link" data-count="3">ISMB</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ismc" class="product-link" data-count="4">ISMC</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ismc-2" class="product-link" data-count="5">ISMC 2</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ismc-3" class="product-link" data-count="6">ISMC 3</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-bars" class="product-link" data-count="7">M S Bars</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-flat" class="product-link" data-count="8">M S Flat</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-pipe" class="product-link" data-count="9">M S Pipe</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-pipe-1" class="product-link" data-count="10">M S Pipe (1)</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#steel-barbed-wire" class="product-link" data-count="11">Steel Barbed Wire</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#tmt-bars" class="product-link" data-count="12">TMT Bars</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#weldmesh" class="product-link" data-count="13">Weldmesh</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="wpo-contact-widget widget">
@@ -382,7 +415,7 @@
                                 <div class="logo widget-title">
                                     <div class="navbar-header" style="text-align: center;">
                                         <a class="navbar-brand" href="index.html" style="display: block; text-align: center;">
-                                            <h2 style="margin: 0; color: #2563eb; font-weight: bold; text-align: center;">Burhani Timber</h2>
+                                            <h2 style="margin: 0; color: var(--theme-color-text_link); font-weight: bold; text-align: center;">Burhani Timber</h2>
                                             <p style="margin: 0; color: #ffff; font-size: 14px; text-align: center;">Construction Materials & Timber</p>
                                         </a>
                                     </div>
@@ -455,12 +488,21 @@
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
     
-    <!-- Product Navigation Script -->
+    <!-- Enhanced Product Navigation Script -->
     <script>
         // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Get all product links in the sidebar
             const productLinks = document.querySelectorAll('.product-link');
+            const productListContainer = document.querySelector('.product-list-container');
+            
+            // Add loading animation
+            productListContainer.classList.add('loading');
+            
+            // Remove loading after animation delay
+            setTimeout(function() {
+                productListContainer.classList.remove('loading');
+            }, 2000);
             
             // Add click event listener to each product link
             productLinks.forEach(function(link) {
@@ -505,6 +547,123 @@
                         }, 3000);
                     }
                 });
+                
+                // Add hover effect for better UX
+                link.addEventListener('mouseenter', function() {
+                    // Add subtle animation
+                    this.style.transform = 'translateX(3px) scale(1.02)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    // Reset transform if not active
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateX(0) scale(1)';
+                    }
+                });
+            });
+            
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                const activeLink = document.querySelector('.product-link.active');
+                if (!activeLink) return;
+                
+                const currentIndex = Array.from(productLinks).indexOf(activeLink);
+                let newIndex = currentIndex;
+                
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        newIndex = Math.min(currentIndex + 1, productLinks.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        newIndex = Math.max(currentIndex - 1, 0);
+                        break;
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        activeLink.click();
+                        return;
+                }
+                
+                if (newIndex !== currentIndex) {
+                    productLinks[newIndex].click();
+                }
+            });
+            
+            // Add scroll spy functionality
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -20% 0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        const correspondingLink = document.querySelector(`[href="#${targetId}"]`);
+                        
+                        if (correspondingLink) {
+                            // Remove active class from all links
+                            productLinks.forEach(function(l) {
+                                l.classList.remove('active');
+                            });
+                            
+                            // Add active class to corresponding link
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all product cards
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                observer.observe(card);
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('productSearch');
+            const productListItems = document.querySelectorAll('.product-list-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                productListItems.forEach(function(item) {
+                    const productName = item.querySelector('.product-link').textContent.toLowerCase();
+                    const isVisible = productName.includes(searchTerm);
+                    
+                    if (isVisible) {
+                        item.classList.remove('hidden');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Update counter badges
+                updateCounterBadges();
+            });
+            
+            // Function to update counter badges
+            function updateCounterBadges() {
+                const visibleItems = document.querySelectorAll('.product-list-item:not(.hidden)');
+                visibleItems.forEach(function(item, index) {
+                    const link = item.querySelector('.product-link');
+                    link.setAttribute('data-count', index + 1);
+                });
+            }
+            
+            // Add smooth scroll to top when search is cleared
+            searchInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    const productListContainer = document.querySelector('.product-list-container');
+                    productListContainer.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>

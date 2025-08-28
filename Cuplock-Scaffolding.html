@@ -25,6 +25,7 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/product-gallery.css" rel="stylesheet">
+    <link href="assets/css/product-list-ui.css" rel="stylesheet">
  
 </head>
 
@@ -40,7 +41,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img height="50px" width="50px" src="assets/images/wood.png" alt="">
                 </div>
             </div>
         </div>
@@ -150,22 +151,54 @@
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
                            
-                            <div class="widget category-widget">
-                                <h3>Cuplock Scaffolding Products</h3>
-                                <ul>
-                                    <li><a href="#base-jack" class="product-link">Base Jack</a></li>
-                                    <li><a href="#fixed-coupler" class="product-link">Fixed Coupler</a></li>
-                                    <li><a href="#gogo-machine" class="product-link">Gogo Machine </a></li>
-                                    <li><a href="#gogo-nut" class="product-link">Gogo Nut </a></li>
-                                    <li><a href="#h-frame" class="product-link">H Frame </a></li>
-                                    <li><a href="#joint-pin" class="product-link">Joint Pin </a></li>
-                                    <li><a href="#ledger" class="product-link">Ledger </a></li>
-                                    <li><a href="#ms-jali" class="product-link">M S Jali </a></li>
-                                    <li><a href="#ms-prop-jack" class="product-link">M S Prop Jack </a></li>
-                                    <li><a href="#prop-sleeve" class="product-link">Prop Sleeve </a></li>
-                                    <li><a href="#rapid-clamp" class="product-link">Rapid Clamp </a></li>
-                                    <li><a href="#swivel-coupler" class="product-link">Swivel Coupler </a></li>
-                                    <li><a href="#u-jack" class="product-link">U Jack </a></li>
+                            <div class="product-list-container">
+                                <h3 class="product-list-title">Cuplock Scaffolding Products</h3>
+                                
+                                <!-- Search functionality -->
+                                <div class="product-list-search">
+                                    <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off">
+                                </div>
+                                
+                                <ul class="product-list">
+                                    <li class="product-list-item">
+                                        <a href="#base-jack" class="product-link" data-count="1">Base Jack</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#fixed-coupler" class="product-link" data-count="2">Fixed Coupler</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#gogo-machine" class="product-link" data-count="3">Gogo Machine</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#gogo-nut" class="product-link" data-count="4">Gogo Nut</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#h-frame" class="product-link" data-count="5">H Frame</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#joint-pin" class="product-link" data-count="6">Joint Pin</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ledger" class="product-link" data-count="7">Ledger</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-jali" class="product-link" data-count="8">M S Jali</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-prop-jack" class="product-link" data-count="9">M S Prop Jack</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#prop-sleeve" class="product-link" data-count="10">Prop Sleeve</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#rapid-clamp" class="product-link" data-count="11">Rapid Clamp</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#swivel-coupler" class="product-link" data-count="12">Swivel Coupler</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#u-jack" class="product-link" data-count="13">U Jack</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="wpo-contact-widget widget">
@@ -457,12 +490,21 @@
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
     
-    <!-- Product Navigation Script -->
+    <!-- Enhanced Product Navigation Script -->
     <script>
         // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Get all product links in the sidebar
             const productLinks = document.querySelectorAll('.product-link');
+            const productListContainer = document.querySelector('.product-list-container');
+            
+            // Add loading animation
+            productListContainer.classList.add('loading');
+            
+            // Remove loading after animation delay
+            setTimeout(function() {
+                productListContainer.classList.remove('loading');
+            }, 2000);
             
             // Add click event listener to each product link
             productLinks.forEach(function(link) {
@@ -507,6 +549,123 @@
                         }, 3000);
                     }
                 });
+                
+                // Add hover effect for better UX
+                link.addEventListener('mouseenter', function() {
+                    // Add subtle animation
+                    this.style.transform = 'translateX(3px) scale(1.02)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    // Reset transform if not active
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateX(0) scale(1)';
+                    }
+                });
+            });
+            
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                const activeLink = document.querySelector('.product-link.active');
+                if (!activeLink) return;
+                
+                const currentIndex = Array.from(productLinks).indexOf(activeLink);
+                let newIndex = currentIndex;
+                
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        newIndex = Math.min(currentIndex + 1, productLinks.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        newIndex = Math.max(currentIndex - 1, 0);
+                        break;
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        activeLink.click();
+                        return;
+                }
+                
+                if (newIndex !== currentIndex) {
+                    productLinks[newIndex].click();
+                }
+            });
+            
+            // Add scroll spy functionality
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -20% 0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        const correspondingLink = document.querySelector(`[href="#${targetId}"]`);
+                        
+                        if (correspondingLink) {
+                            // Remove active class from all links
+                            productLinks.forEach(function(l) {
+                                l.classList.remove('active');
+                            });
+                            
+                            // Add active class to corresponding link
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all product cards
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                observer.observe(card);
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('productSearch');
+            const productListItems = document.querySelectorAll('.product-list-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                productListItems.forEach(function(item) {
+                    const productName = item.querySelector('.product-link').textContent.toLowerCase();
+                    const isVisible = productName.includes(searchTerm);
+                    
+                    if (isVisible) {
+                        item.classList.remove('hidden');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Update counter badges
+                updateCounterBadges();
+            });
+            
+            // Function to update counter badges
+            function updateCounterBadges() {
+                const visibleItems = document.querySelectorAll('.product-list-item:not(.hidden)');
+                visibleItems.forEach(function(item, index) {
+                    const link = item.querySelector('.product-link');
+                    link.setAttribute('data-count', index + 1);
+                });
+            }
+            
+            // Add smooth scroll to top when search is cleared
+            searchInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    const productListContainer = document.querySelector('.product-list-container');
+                    productListContainer.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>

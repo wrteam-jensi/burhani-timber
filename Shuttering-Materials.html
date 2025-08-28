@@ -26,6 +26,7 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/product-gallery.css" rel="stylesheet">
+    <link href="assets/css/product-list-ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img height="50px" width="50px" src="assets/images/wood.png" alt="">
                 </div>
             </div>
         </div>
@@ -150,26 +151,66 @@
                     <div class="col-lg-4 order-lg-1 order-md-2">
                         <div class="blog-sidebar">
                            
-                            <div class="widget category-widget">
-                                <h3>Shuttering Materials Products</h3>
-                                <ul>
-                                    <li><a href="#anchor-nut" class="product-link">Anchor Nut</a></li>
-                                    <li><a href="#binding-wire" class="product-link">Binding Wire</a></li>
-                                    <li><a href="#cover-blocks" class="product-link">Cover Blocks</a></li>
-                                    <li><a href="#lapha-patti" class="product-link">Lapha Patti</a></li>
-                                    <li><a href="#ms-round-column" class="product-link">M S Round Column</a></li>
-                                    <li><a href="#ms-shuttering-plate" class="product-link">M S Shuttering Plate</a></li>
-                                    <li><a href="#ms-sikanja" class="product-link">M S Sikanja</a></li>
-                                    <li><a href="#nails" class="product-link">Nails</a></li>
-                                    <li><a href="#pine-wood-runners" class="product-link">Pine Wood Runners</a></li>
-                                    <li><a href="#shuttering-oil" class="product-link">Shuttering Oil</a></li>
-                                    <li><a href="#shuttering-plywood" class="product-link">Shuttering Plywood</a></li>
-                                    <li><a href="#tie-rod" class="product-link">Tie Rod</a></li>
-                                    <li><a href="#wooden-balli" class="product-link">Wooden Balli</a></li>
-                                    <li><a href="#wooden-chavi" class="product-link">Wooden Chavi</a></li>
-                                    <li><a href="#wooden-chavi-2" class="product-link">Wooden Chavi 2</a></li>
-                                    <li><a href="#wooden-patiya" class="product-link">Wooden Patiya</a></li>
-                                    <li><a href="#wooden-patiya-2" class="product-link">Wooden Patiya 2</a></li>
+                            <div class="product-list-container">
+                                <h3 class="product-list-title">Shuttering Materials Products</h3>
+                                
+                                <!-- Search functionality -->
+                                <div class="product-list-search">
+                                    <input type="text" id="productSearch" placeholder="Search products..." autocomplete="off">
+                                </div>
+                                
+                                <ul class="product-list">
+                                    <li class="product-list-item">
+                                        <a href="#anchor-nut" class="product-link" data-count="1">Anchor Nut</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#binding-wire" class="product-link" data-count="2">Binding Wire</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#cover-blocks" class="product-link" data-count="3">Cover Blocks</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#lapha-patti" class="product-link" data-count="4">Lapha Patti</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-round-column" class="product-link" data-count="5">M S Round Column</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-shuttering-plate" class="product-link" data-count="6">M S Shuttering Plate</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#ms-sikanja" class="product-link" data-count="7">M S Sikanja</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#nails" class="product-link" data-count="8">Nails</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#pine-wood-runners" class="product-link" data-count="9">Pine Wood Runners</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#shuttering-oil" class="product-link" data-count="10">Shuttering Oil</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#shuttering-plywood" class="product-link" data-count="11">Shuttering Plywood</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#tie-rod" class="product-link" data-count="12">Tie Rod</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#wooden-balli" class="product-link" data-count="13">Wooden Balli</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#wooden-chavi" class="product-link" data-count="14">Wooden Chavi</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#wooden-chavi-2" class="product-link" data-count="15">Wooden Chavi 2</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#wooden-patiya" class="product-link" data-count="16">Wooden Patiya</a>
+                                    </li>
+                                    <li class="product-list-item">
+                                        <a href="#wooden-patiya-2" class="product-link" data-count="17">Wooden Patiya 2</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="wpo-contact-widget widget">
@@ -535,12 +576,21 @@
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
     
-    <!-- Product Navigation Script -->
+    <!-- Enhanced Product Navigation Script -->
     <script>
         // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Get all product links in the sidebar
             const productLinks = document.querySelectorAll('.product-link');
+            const productListContainer = document.querySelector('.product-list-container');
+            
+            // Add loading animation
+            productListContainer.classList.add('loading');
+            
+            // Remove loading after animation delay
+            setTimeout(function() {
+                productListContainer.classList.remove('loading');
+            }, 2000);
             
             // Add click event listener to each product link
             productLinks.forEach(function(link) {
@@ -585,6 +635,169 @@
                         }, 3000);
                     }
                 });
+                
+                // Add hover effect for better UX
+                link.addEventListener('mouseenter', function() {
+                    // Add subtle animation
+                    this.style.transform = 'translateX(3px) scale(1.02)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    // Reset transform if not active
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateX(0) scale(1)';
+                    }
+                });
+            });
+            
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                const activeLink = document.querySelector('.product-link.active');
+                if (!activeLink) return;
+                
+                const currentIndex = Array.from(productLinks).indexOf(activeLink);
+                let newIndex = currentIndex;
+                
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        newIndex = Math.min(currentIndex + 1, productLinks.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        newIndex = Math.max(currentIndex - 1, 0);
+                        break;
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        activeLink.click();
+                        return;
+                }
+                
+                if (newIndex !== currentIndex) {
+                    productLinks[newIndex].click();
+                }
+            });
+            
+            // Add scroll spy functionality
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -20% 0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        const correspondingLink = document.querySelector(`[href="#${targetId}"]`);
+                        
+                        if (correspondingLink) {
+                            // Remove active class from all links
+                            productLinks.forEach(function(l) {
+                                l.classList.remove('active');
+                            });
+                            
+                            // Add active class to corresponding link
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all product cards
+            document.querySelectorAll('.product-card').forEach(function(card) {
+                observer.observe(card);
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('productSearch');
+            const productListItems = document.querySelectorAll('.product-list-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                productListItems.forEach(function(item) {
+                    const productName = item.querySelector('.product-link').textContent.toLowerCase();
+                    const isVisible = productName.includes(searchTerm);
+                    
+                    if (isVisible) {
+                        item.classList.remove('hidden');
+                        item.style.display = 'block';
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Update counter badges
+                updateCounterBadges();
+            });
+            
+            // Function to update counter badges
+            function updateCounterBadges() {
+                const visibleItems = document.querySelectorAll('.product-list-item:not(.hidden)');
+                visibleItems.forEach(function(item, index) {
+                    const link = item.querySelector('.product-link');
+                    link.setAttribute('data-count', index + 1);
+                });
+            }
+            
+            // Add smooth scroll to top when search is cleared
+            searchInput.addEventListener('input', function() {
+                if (this.value === '') {
+                    const productListContainer = document.querySelector('.product-list-container');
+                    productListContainer.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Ensure scrollbar functionality
+            const productList = document.querySelector('.product-list');
+            
+            // Ensure scrollbar is hidden but scrolling works
+            function checkScrollbar() {
+                if (productList.scrollHeight > productList.clientHeight) {
+                    productList.style.overflowY = 'scroll';
+                    productList.style.scrollbarWidth = 'none';
+                    productList.style.msOverflowStyle = 'none';
+                } else {
+                    productList.style.overflowY = 'hidden';
+                }
+            }
+            
+            // Check on load and resize
+            window.addEventListener('load', checkScrollbar);
+            window.addEventListener('resize', checkScrollbar);
+            
+            // Check after search operations
+            searchInput.addEventListener('input', function() {
+                setTimeout(checkScrollbar, 100);
+            });
+            
+            // Add keyboard navigation for scrolling
+            productList.addEventListener('keydown', function(e) {
+                const scrollAmount = 50;
+                switch(e.key) {
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        productList.scrollTop += scrollAmount;
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        productList.scrollTop -= scrollAmount;
+                        break;
+                    case 'PageDown':
+                        e.preventDefault();
+                        productList.scrollTop += productList.clientHeight;
+                        break;
+                    case 'PageUp':
+                        e.preventDefault();
+                        productList.scrollTop -= productList.clientHeight;
+                        break;
+                }
             });
         });
     </script>
