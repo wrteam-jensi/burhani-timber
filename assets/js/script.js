@@ -654,7 +654,7 @@
                     minlength: 2
                 },
 
-                email: "required",
+              
 
                 phone: "required",
 
@@ -669,7 +669,7 @@
 
             messages: {
                 name: "Please enter your name",
-                email: "Please enter your email address",
+                
                 phone: "Please enter your phone number",
                 subject: "Please select your contact Service",
             },
