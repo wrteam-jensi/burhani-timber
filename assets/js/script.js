@@ -1046,4 +1046,330 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize enhanced product cards
     enhancedProductCards();
+    
+    // Construction & Timber Scroll Effects System
+    class ScrollEffectsManager {
+        constructor() {
+            this.container = null;
+            this.isEnabled = true;
+            this.lastScrollTime = 0;
+            this.scrollThreshold = 50; // Minimum scroll distance to trigger effects
+            this.effectTypes = ['sawdust', 'hammer', 'nail', 'woodchip', 'screw', 'drillbit', 'woodgrain'];
+            this.sizes = ['small', 'medium', 'large'];
+            
+            this.init();
+        }
+        
+        init() {
+            // Create container for scroll effects
+            this.createContainer();
+            
+            // Add scroll event listener
+            this.addScrollListener();
+            
+            // Add performance monitoring
+            this.monitorPerformance();
+        }
+        
+        createContainer() {
+            this.container = document.createElement('div');
+            this.container.className = 'scroll-tools-container';
+            document.body.appendChild(this.container);
+        }
+        
+        addScrollListener() {
+            let scrollTimeout;
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', () => {
+                if (!this.isEnabled) return;
+                
+                const currentTime = Date.now();
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollDistance = Math.abs(currentScrollTop - lastScrollTop);
+                
+                // Throttle effects to prevent performance issues
+                if (currentTime - this.lastScrollTime < 100) return;
+                
+                // Only trigger effects for significant scroll movements
+                if (scrollDistance > this.scrollThreshold) {
+                    this.createScrollEffects(currentScrollTop, scrollDistance);
+                    this.lastScrollTime = currentTime;
+                }
+                
+                lastScrollTop = currentScrollTop;
+                
+                // Clear existing timeout
+                clearTimeout(scrollTimeout);
+                
+                // Disable effects temporarily after scroll stops
+                scrollTimeout = setTimeout(() => {
+                    this.isEnabled = true;
+                }, 500);
+            });
+        }
+        
+        createScrollEffects(scrollTop, scrollDistance) {
+            const intensity = Math.min(scrollDistance / 100, 3); // Limit intensity
+            const effectCount = Math.floor(intensity);
+            
+            for (let i = 0; i < effectCount; i++) {
+                setTimeout(() => {
+                    this.createRandomEffect();
+                }, i * 50); // Stagger effects
+            }
+        }
+        
+        createRandomEffect() {
+            const effectType = this.effectTypes[Math.floor(Math.random() * this.effectTypes.length)];
+            const size = this.sizes[Math.floor(Math.random() * this.sizes.length)];
+            
+            switch (effectType) {
+                case 'sawdust':
+                    this.createSawdust(size);
+                    break;
+                case 'hammer':
+                    this.createHammer();
+                    break;
+                case 'nail':
+                    this.createNail();
+                    break;
+                case 'woodchip':
+                    this.createWoodchip(size);
+                    break;
+                case 'screw':
+                    this.createScrew();
+                    break;
+                case 'drillbit':
+                    this.createDrillbit();
+                    break;
+                case 'woodgrain':
+                    this.createWoodgrain(size);
+                    break;
+            }
+        }
+        
+        createSawdust(size) {
+            const sawdust = document.createElement('div');
+            sawdust.className = `scroll-sawdust ${size}`;
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 20;
+            
+            sawdust.style.left = `${x}px`;
+            sawdust.style.top = `${y}px`;
+            
+            this.container.appendChild(sawdust);
+            
+            setTimeout(() => {
+                if (sawdust.parentNode) {
+                    sawdust.parentNode.removeChild(sawdust);
+                }
+            }, 5000);
+        }
+        
+        createHammer() {
+            const hammer = document.createElement('div');
+            hammer.className = 'scroll-hammer';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 30;
+            
+            hammer.style.left = `${x}px`;
+            hammer.style.top = `${y}px`;
+            
+            this.container.appendChild(hammer);
+            
+            setTimeout(() => {
+                if (hammer.parentNode) {
+                    hammer.parentNode.removeChild(hammer);
+                }
+            }, 2500);
+        }
+        
+        createNail() {
+            const nail = document.createElement('div');
+            nail.className = 'scroll-nail';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 15;
+            
+            nail.style.left = `${x}px`;
+            nail.style.top = `${y}px`;
+            
+            this.container.appendChild(nail);
+            
+            setTimeout(() => {
+                if (nail.parentNode) {
+                    nail.parentNode.removeChild(nail);
+                }
+            }, 3000);
+        }
+        
+        createWoodchip(size) {
+            const woodchip = document.createElement('div');
+            woodchip.className = `scroll-woodchip ${size}`;
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 25;
+            
+            woodchip.style.left = `${x}px`;
+            woodchip.style.top = `${y}px`;
+            
+            this.container.appendChild(woodchip);
+            
+            setTimeout(() => {
+                if (woodchip.parentNode) {
+                    woodchip.parentNode.removeChild(woodchip);
+                }
+            }, 4000);
+        }
+        
+        createScrew() {
+            const screw = document.createElement('div');
+            screw.className = 'scroll-screw';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 20;
+            
+            screw.style.left = `${x}px`;
+            screw.style.top = `${y}px`;
+            
+            this.container.appendChild(screw);
+            
+            setTimeout(() => {
+                if (screw.parentNode) {
+                    screw.parentNode.removeChild(screw);
+                }
+            }, 4000);
+        }
+        
+        createDrillbit() {
+            const drillbit = document.createElement('div');
+            drillbit.className = 'scroll-drillbit';
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 25;
+            
+            drillbit.style.left = `${x}px`;
+            drillbit.style.top = `${y}px`;
+            
+            this.container.appendChild(drillbit);
+            
+            setTimeout(() => {
+                if (drillbit.parentNode) {
+                    drillbit.parentNode.removeChild(drillbit);
+                }
+            }, 3000);
+        }
+        
+        createWoodgrain(size) {
+            const woodgrain = document.createElement('div');
+            woodgrain.className = `scroll-woodgrain ${size}`;
+            
+            const x = Math.random() * window.innerWidth;
+            const y = window.innerHeight + 10;
+            
+            woodgrain.style.left = `${x}px`;
+            woodgrain.style.top = `${y}px`;
+            
+            this.container.appendChild(woodgrain);
+            
+            setTimeout(() => {
+                if (woodgrain.parentNode) {
+                    woodgrain.parentNode.removeChild(woodgrain);
+                }
+            }, 3500);
+        }
+        
+        monitorPerformance() {
+            // Monitor frame rate and disable effects if performance is poor
+            let frameCount = 0;
+            let lastTime = performance.now();
+            
+            const checkPerformance = () => {
+                frameCount++;
+                const currentTime = performance.now();
+                
+                if (currentTime - lastTime >= 1000) {
+                    const fps = frameCount;
+                    frameCount = 0;
+                    lastTime = currentTime;
+                    
+                    // Disable effects if FPS is too low
+                    if (fps < 30) {
+                        this.isEnabled = false;
+                        setTimeout(() => {
+                            this.isEnabled = true;
+                        }, 2000);
+                    }
+                }
+                
+                requestAnimationFrame(checkPerformance);
+            };
+            
+            requestAnimationFrame(checkPerformance);
+        }
+        
+        // Public method to toggle effects
+        toggleEffects() {
+            this.isEnabled = !this.isEnabled;
+            if (!this.isEnabled) {
+                // Clear all existing effects
+                this.container.innerHTML = '';
+            }
+        }
+        
+        // Public method to change effect intensity
+        setIntensity(level) {
+            this.scrollThreshold = Math.max(10, 100 - (level * 20));
+        }
+    }
+    
+    // Initialize scroll effects
+    const scrollEffects = new ScrollEffectsManager();
+    
+    // Add keyboard shortcut to toggle effects (Ctrl + Shift + E)
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+            e.preventDefault();
+            scrollEffects.toggleEffects();
+            console.log('Scroll effects toggled:', scrollEffects.isEnabled);
+        }
+    });
+    
+    // Add touch support for mobile devices
+    let touchStartY = 0;
+    let touchEndY = 0;
+    
+    document.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    });
+    
+    document.addEventListener('touchend', (e) => {
+        touchEndY = e.changedTouches[0].clientY;
+        const scrollDistance = Math.abs(touchEndY - touchStartY);
+        
+        if (scrollDistance > 50 && scrollEffects.isEnabled) {
+            // Create effects for touch scroll
+            const effectCount = Math.min(Math.floor(scrollDistance / 20), 5);
+            for (let i = 0; i < effectCount; i++) {
+                setTimeout(() => {
+                    scrollEffects.createRandomEffect();
+                }, i * 100);
+            }
+        }
+    });
+    
+    // Performance optimization: Pause effects when page is not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            scrollEffects.isEnabled = false;
+        } else {
+            scrollEffects.isEnabled = true;
+        }
+    });
+    
+    // Make scroll effects available globally for debugging
+    window.scrollEffects = scrollEffects;
 });

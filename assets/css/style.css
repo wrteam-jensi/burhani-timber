@@ -2179,7 +2179,7 @@ a:hover {
     margin: 0;
   }
   .wpo-site-header #navbar {
-    background: #1a222e;
+    background: var(--theme-color-text_dark);
     display: block !important;
     width: 300px;
     height: 100%;
@@ -3285,7 +3285,7 @@ hero slider
 /* 3.2 wpo-features-section */
 .wpo-features-section,
 .wpo-features-section-s2 {
-  background: #fff;
+  background: linear-gradient(135deg, #f0eddf 0%, #f0eddf 100%);
   margin-top: -150px;
   z-index: 99;
   position: relative;
@@ -3311,7 +3311,7 @@ hero slider
   width: 120%;
   height: 120%;
   content: "";
-  background: #fff;
+  background: linear-gradient(135deg, #f0eddf 0%, #f0eddf 100%);
   z-index: -1;
   border-radius: 50%;
 }
@@ -10329,6 +10329,420 @@ hero slider
   transition: all 0.3s ease;
 }
 
+/* Construction & Timber Scroll Effects */
+.scroll-tools-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Wood Sawdust Particles */
+.scroll-sawdust {
+    position: absolute;
+    background: linear-gradient(45deg, #8B4513, #D2691E, #CD853F);
+    border-radius: 2px;
+    pointer-events: none;
+    animation: sawdustFloat 4s ease-out forwards;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.4);
+    transform: rotate(45deg);
+}
+
+.scroll-sawdust.small {
+    width: 3px;
+    height: 8px;
+    animation-duration: 3s;
+}
+
+.scroll-sawdust.medium {
+    width: 4px;
+    height: 12px;
+    animation-duration: 4s;
+}
+
+.scroll-sawdust.large {
+    width: 6px;
+    height: 16px;
+    animation-duration: 5s;
+}
+
+@keyframes sawdustFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.3) rotate(45deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-30px) scale(1) rotate(45deg);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-80px) scale(1.2) rotate(90deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-150px) scale(0.5) rotate(180deg);
+    }
+}
+
+/* Hammer Effect */
+.scroll-hammer {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    pointer-events: none;
+    animation: hammerSwing 2.5s ease-out forwards;
+}
+
+.scroll-hammer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(90deg, #696969, #A9A9A9);
+    border-radius: 2px;
+}
+
+.scroll-hammer::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 12px;
+    background: linear-gradient(90deg, #8B4513, #A0522D);
+    border-radius: 2px;
+}
+
+@keyframes hammerSwing {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(-45deg) scale(0.5);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-20px) rotate(0deg) scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateY(-40px) rotate(45deg) scale(1.1);
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateY(-60px) rotate(90deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(180deg) scale(0.5);
+    }
+}
+
+/* Nail Effect */
+.scroll-nail {
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    background: linear-gradient(180deg, #C0C0C0, #808080);
+    border-radius: 1px;
+    pointer-events: none;
+    animation: nailDrop 3s ease-out forwards;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-nail::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 2px;
+    background: #C0C0C0;
+    border-radius: 1px;
+}
+
+@keyframes nailDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-60px) scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(0.8);
+    }
+}
+
+/* Wood Chips */
+.scroll-woodchip {
+    position: absolute;
+    background: linear-gradient(45deg, #8B4513, #A0522D, #CD853F);
+    border-radius: 3px;
+    pointer-events: none;
+    animation: woodchipFloat 3.5s ease-out forwards;
+    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.5);
+}
+
+.scroll-woodchip.small {
+    width: 8px;
+    height: 12px;
+    animation-duration: 3s;
+}
+
+.scroll-woodchip.medium {
+    width: 12px;
+    height: 18px;
+    animation-duration: 3.5s;
+}
+
+.scroll-woodchip.large {
+    width: 16px;
+    height: 24px;
+    animation-duration: 4s;
+}
+
+@keyframes woodchipFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.3) rotate(0deg);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-25px) scale(1) rotate(45deg);
+    }
+    70% {
+        opacity: 0.8;
+        transform: translateY(-70px) scale(1.2) rotate(90deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-130px) scale(0.6) rotate(180deg);
+    }
+}
+
+/* Screw Effect */
+.scroll-screw {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(180deg, #C0C0C0, #A0A0A0);
+    border-radius: 2px;
+    pointer-events: none;
+    animation: screwRotate 4s ease-out forwards;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-screw::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 3px;
+    background: #C0C0C0;
+    border-radius: 1px;
+}
+
+@keyframes screwRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1) rotate(180deg);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateY(-50px) scale(1.1) rotate(360deg);
+    }
+    80% {
+        opacity: 0.6;
+        transform: translateY(-80px) scale(1) rotate(540deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(0.7) rotate(720deg);
+    }
+}
+
+/* Drill Bit Effect */
+.scroll-drillbit {
+    position: absolute;
+    width: 6px;
+    height: 25px;
+    background: linear-gradient(180deg, #2F4F4F, #696969);
+    border-radius: 3px;
+    pointer-events: none;
+    animation: drillbitSpin 3s ease-out forwards;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-drillbit::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 4px;
+    background: #2F4F4F;
+    border-radius: 2px;
+}
+
+@keyframes drillbitSpin {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5) rotate(0deg);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-30px) scale(1) rotate(360deg);
+    }
+    70% {
+        opacity: 0.8;
+        transform: translateY(-70px) scale(1.2) rotate(720deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-110px) scale(0.6) rotate(1080deg);
+    }
+}
+
+/* Wood Grain Lines */
+.scroll-woodgrain {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B4513, transparent);
+    pointer-events: none;
+    animation: woodgrainFlow 3s ease-out forwards;
+    border-radius: 1px;
+}
+
+.scroll-woodgrain.small {
+    width: 20px;
+    animation-duration: 2.5s;
+}
+
+.scroll-woodgrain.medium {
+    width: 30px;
+    animation-duration: 3s;
+}
+
+.scroll-woodgrain.large {
+    width: 40px;
+    animation-duration: 3.5s;
+}
+
+@keyframes woodgrainFlow {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scaleX(0.3);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(-20px) scaleX(1);
+    }
+    70% {
+        opacity: 0.7;
+        transform: translateY(-60px) scaleX(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scaleX(0.5);
+    }
+}
+
+/* Responsive adjustments for construction scroll effects */
+@media (max-width: 768px) {
+    .scroll-sawdust.large {
+        width: 4px;
+        height: 12px;
+    }
+    
+    .scroll-woodchip.large {
+        width: 12px;
+        height: 18px;
+    }
+    
+    .scroll-woodgrain.large {
+        width: 30px;
+    }
+    
+    .scroll-hammer {
+        width: 16px;
+        height: 24px;
+    }
+    
+    .scroll-drillbit {
+        width: 5px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-tools-container {
+        display: none; /* Disable on very small screens for performance */
+    }
+}
+
+/* Performance optimization - reduce effects on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-sawdust,
+    .scroll-hammer,
+    .scroll-nail,
+    .scroll-woodchip,
+    .scroll-screw,
+    .scroll-drillbit,
+    .scroll-woodgrain {
+        animation-duration: 1s !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .scroll-sawdust {
+        background: #8B4513;
+        border: 1px solid #000;
+    }
+    
+    .scroll-woodchip {
+        background: #8B4513;
+        border: 1px solid #000;
+    }
+    
+    .scroll-woodgrain {
+        background: #8B4513;
+        border: 1px solid #000;
+    }
+    
+    .scroll-hammer::before {
+        background: #696969;
+        border: 1px solid #000;
+    }
+    
+    .scroll-hammer::after {
+        background: #8B4513;
+        border: 1px solid #000;
+    }
+}
+
 /* Enhanced focus states for accessibility */
 .why-choose-card.premium:focus,
 .btn.premium:focus {
@@ -10372,3 +10786,7 @@ hero slider
 .why-choose-card.premium:hover::before {
   opacity: 0.3;
 }
+
+
+
+
