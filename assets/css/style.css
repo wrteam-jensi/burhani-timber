@@ -11261,3 +11261,80 @@ hero slider
 
 
 
+@media (max-width: 768px) {
+  .stat-card {
+      margin-bottom: 20px;
+  }
+  
+  .feature-item {
+      margin-bottom: 15px;
+  }
+}
+
+/* Product Category Card Enhancements */
+.product-category-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.product-category-card:hover {
+  transform: translateY(-15px) !important;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15) !important;
+}
+
+.product-category-card:hover .product-image img {
+  transform: scale(1.1);
+  transition: transform 0.6s ease;
+}
+
+.product-category-card:hover .icon-title div:first-child {
+  transform: scale(1.1) rotate(5deg);
+  transition: all 0.4s ease;
+}
+
+.product-category-card:hover .icon-title i {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+.product-category-card:hover .hover-overlay {
+  opacity: 1 !important;
+}
+
+.product-category-card:hover a {
+  color: #B18857 !important;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.product-category-card:hover a i {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Tag hover effects */
+.tags span {
+  transition: all 0.3s ease;
+}
+
+.product-category-card:hover .tags span {
+  background: #B18857 !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* Section badge animation */
+.section-badge {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating animation for background elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
