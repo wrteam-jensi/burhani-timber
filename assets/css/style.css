@@ -3802,7 +3802,7 @@ hero slider
   width: 150px;
   height: 150px;
   content: "";
-  background: #574c3f;
+  background: rgba(255, 255, 255, 0.05);
   z-index: -1;
   border-radius: 50%;
 }
@@ -3812,7 +3812,9 @@ hero slider
 .wpo-work-section .wpo-work-wrap .wpo-work-item .wpo-work-text h2 {
   margin-bottom: 0;
 }
-
+.wpo-work-section .wpo-work-wrap .wpo-work-item .wpo-work-text h2 a {
+  color: #fff;
+}
 .wpo-work-section .wpo-work-wrap .col:last-child .wpo-work-item {
   background: #504037;
 }
