@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/wood.png">
-    <title> Plumco - Plumber Service HTML5 Template</title>
     <title> Burhani Timber - Construction Materials & Timber Products</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
@@ -26,6 +26,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/product-gallery.css" rel="stylesheet">
     <link href="assets/css/product-list-ui.css" rel="stylesheet">
+    <link href="assets/css/category-tabs.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -211,30 +213,64 @@
                                 <h2 class="gallery-title">Iron & Steel Products Gallery</h2>
                                 <p class="gallery-description">Explore our complete range of Iron & Steel products. We offer high-quality steel materials for all your construction and industrial needs.</p>
                             </div>
-                            <div class="product-category-tabs mb-4">
+                            <div class="product-category-tabs mb-5">
                                 <div class="row justify-content-center">
                                     <div class="col-12">
                                         <div class="category-tabs-container">
-                                            <a href="Shuttering-Materials.html" class="category-tab active" data-category="all">
-                                                <i class="fas fa-th-large"></i>
-                                                <span>Shuttering Materials</span>
-                                            </a>
-                                            <a href="Cuplock-Scaffolding.html" class="category-tab" data-category="wooden">
-                                                <i class="fas fa-cogs"></i>
-                                                <span>Cuplock Scaffolding</span>
-                                            </a>
-                                            <a href="Iron-Steel.html" class="category-tab" data-category="steel">
-                                                <i class="fas fa-tree"></i>
-                                                <span>Iron & Steel</span>
-                                            </a>
-                                            <a href="Power-Tools-and-Safety.html" class="category-tab" data-category="accessories">
-                                                <i class="fas fa-tools"></i>
-                                                <span>Power Tools & Safety</span>
-                                            </a>
-                                            <a href="Other.html" class="category-tab" data-category="other">
-                                                <i class="fas fa-boxes"></i>
-                                                <span>Other</span>
-                                            </a>
+                                            <div class="category-tab " data-category="shuttering" onclick="window.location.href='Shuttering-Materials.html'">
+                                                <div class="tab-icon">
+                                                    <i class="fas fa-layer-group"></i>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <span class="tab-title">Shuttering Materials</span>
+                                                    
+                                                </div>
+                                                <div class="tab-indicator"></div>
+                                            </div>
+                                            
+                                            <div class="category-tab" data-category="scaffolding" onclick="window.location.href='Cuplock-Scaffolding.html'">
+                                                <div class="tab-icon">
+                                                    <i class="fas fa-cogs"></i>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <span class="tab-title">Cuplock Scaffolding</span>
+                                                   
+                                                </div>
+                                                <div class="tab-indicator"></div>
+                                            </div>
+                                            
+                                            <div class="category-tab active" data-category="steel" onclick="window.location.href='Iron-Steel.html'">
+                                                <div class="tab-icon">
+                                                    <i class="fas fa-industry"></i>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <span class="tab-title">Iron & Steel</span>
+                                                  
+                                                </div>
+                                                <div class="tab-indicator"></div>
+                                            </div>
+                                            
+                                            <div class="category-tab" data-category="tools" onclick="window.location.href='Power-Tools-and-Safety.html'">
+                                                <div class="tab-icon">
+                                                    <i class="fas fa-tools"></i>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <span class="tab-title">Power Tools & Safety</span>
+                                                   
+                                                </div>
+                                                <div class="tab-indicator"></div>
+                                            </div>
+                                            
+                                            <div class="category-tab" data-category="other" onclick="window.location.href='Other.html'">
+                                                <div class="tab-icon">
+                                                    <i class="fas fa-boxes"></i>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <span class="tab-title">Other Materials</span>
+                                                    
+                                                </div>
+                                                <div class="tab-indicator"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

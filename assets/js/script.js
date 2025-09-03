@@ -1373,3 +1373,57 @@ document.addEventListener('DOMContentLoaded', function() {
     // Make scroll effects available globally for debugging
     window.scrollEffects = scrollEffects;
 });
+
+// Enhanced Category Tabs Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryTabsContainer = document.querySelector('.category-tabs-container');
+    
+    if (categoryTabsContainer) {
+        // Add scrollable class when content overflows
+        function checkScrollable() {
+            if (categoryTabsContainer.scrollWidth > categoryTabsContainer.clientWidth) {
+                categoryTabsContainer.classList.add('scrollable');
+            } else {
+                categoryTabsContainer.classList.remove('scrollable');
+            }
+        }
+        
+        // Check on load and resize
+        checkScrollable();
+        window.addEventListener('resize', checkScrollable);
+        
+        // Smooth scroll to center active tab on mobile
+        const activeTab = categoryTabsContainer.querySelector('.category-tab.active');
+        if (activeTab && window.innerWidth <= 768) {
+            const containerWidth = categoryTabsContainer.clientWidth;
+            const tabWidth = activeTab.offsetWidth;
+            const tabLeft = activeTab.offsetLeft;
+            const scrollLeft = tabLeft - (containerWidth / 2) + (tabWidth / 2);
+            
+            categoryTabsContainer.scrollTo({
+                left: Math.max(0, scrollLeft),
+                behavior: 'smooth'
+            });
+        }
+        
+        // Add touch/swipe support for mobile
+        let startX = 0;
+        let scrollLeft = 0;
+        
+        categoryTabsContainer.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].pageX - categoryTabsContainer.offsetLeft;
+            scrollLeft = categoryTabsContainer.scrollLeft;
+        });
+        
+        categoryTabsContainer.addEventListener('touchmove', function(e) {
+            if (!startX) return;
+            const x = e.touches[0].pageX - categoryTabsContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            categoryTabsContainer.scrollLeft = scrollLeft - walk;
+        });
+        
+        categoryTabsContainer.addEventListener('touchend', function() {
+            startX = 0;
+        });
+    }
+});
