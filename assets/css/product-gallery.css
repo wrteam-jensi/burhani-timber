@@ -12,8 +12,8 @@
     --card-border: 1px solid rgba(177, 136, 87, 0.15);
     --card-border-hover: 2px solid var(--theme-color-text_link);
     --image-bg: #fafafa;
-    --title-color: var(--theme-color-text_dark);
-    --description-color: var(--theme-color-text_light);
+    --title-color: #ffffff;
+    --description-color: #ffffff;
     --accent-color: var(--theme-color-text_link);
     --accent-hover: var(--theme-color-text_hover);
     --watermark-opacity: 0.03;
