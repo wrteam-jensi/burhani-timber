@@ -3,7 +3,7 @@
 
 /* Main Product List Container */
 .product-list-container {
-    background: linear-gradient(145deg, var(--theme-color-extra_bg_color), #504037);
+    background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 15px 35px rgba(80, 64, 55, 0.15);

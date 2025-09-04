@@ -102,7 +102,7 @@ html {
   --theme-color-bd_color: #b18857; /* Golden brown - borders */
   --theme-color-text: #504037; /* Dark brown - main text */
   --theme-color-text_light: #716a60; /* Lighter dark brown - secondary text */
-  --theme-color-text_dark: #504037; /* Dark brown - headings */
+  --theme-color-text_dark: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b); /* Dark brown - headings */
   --theme-color-text_link: #b18857; /* Golden brown - links */
   --theme-color-text_hover: #956935; /* Darker golden brown - link hover */
   --theme-color-text_link2: #b18857; /* Golden brown - secondary links */
@@ -1187,7 +1187,7 @@ a:hover {
 }
 .blog-sidebar .wpo-contact-widget {
   border: 0;
-  background: #504037;
+  background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
   padding: 30px 40px;
   margin-bottom: 100px;
 }
@@ -1317,7 +1317,7 @@ a:hover {
 --------------------------------------------------------------*/
 /*-- 2.1 topbar --*/
 .topbar {
-  background: var(--theme-color-text_dark);
+  background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
 }
 
 @media (max-width: 991px) {

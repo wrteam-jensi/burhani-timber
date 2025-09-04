@@ -38,7 +38,8 @@
    GALLERY HEADER SECTION
    ======================================== */
 .product-gallery-header {
-    background: #504037;
+    background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
+    border-color: #9a7c6b;
     border-radius: 20px;
     padding: 3rem 2rem;
     margin-bottom: 3rem;
@@ -226,7 +227,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background:#504037 ;
+    background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
     
     position: relative;
     z-index: 2;
@@ -353,13 +354,13 @@
    GALLERY FOOTER
    ======================================== */
 .product-gallery-footer {
-    background: #504037;
+    background: linear-gradient(45deg, #71594b, #4c3b31, #6b574b, #3f322b);
     border-radius: 20px;
     padding: 2.5rem;
     margin-top: 3rem;
     text-align: center;
     box-shadow: 0 8px 32px rgba(80, 64, 55, 0.1);
-    border: 2px solid #b18857;
+        border: 2px solid #b18857;
     position: relative;
     overflow: hidden;
 }
