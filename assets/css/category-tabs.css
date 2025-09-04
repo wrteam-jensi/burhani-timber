@@ -526,13 +526,43 @@
     animation: successPulse 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
+
+    @media (prefers-color-scheme: light ) {
     .category-tab {
         background: linear-gradient(45deg, #9a7c6b, #4c3b31, #6b574b, #504037);
         border-color: rgba(74, 85, 104, 0.8);
+            color: #e2e8f0;
+        }
+
+        
+    
+    .category-tab:hover {
+        background: linear-gradient(45deg, #9a7c6b, #4c3b31, #6b574b, #504037);
+        border-color: #9a7c6b;
+    }
+        
+    .tab-icon {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+        color: white;
+    }
+    
+    .tab-title {
         color: #e2e8f0;
     }
+    
+    .tab-subtitle {
+        color: #a0aec0;
+    }
+}
+
+@media (prefers-color-scheme: dark ) {
+    .category-tab {
+        background: linear-gradient(45deg, #9a7c6b, #4c3b31, #6b574b, #504037);
+        border-color: rgba(74, 85, 104, 0.8);
+            color: #e2e8f0;
+        }
+
+        
     
     .category-tab:hover {
         background: linear-gradient(45deg, #9a7c6b, #4c3b31, #6b574b, #504037);
@@ -588,6 +618,7 @@
 .category-tab {
     /* Ensure proper stacking context */
     isolation: isolate;
+   
 }
 
 /* Better contrast for tab titles */
