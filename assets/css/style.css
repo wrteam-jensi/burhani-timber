@@ -11117,3 +11117,48 @@ hero slider
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
+
+
+
+
+/* Base styles for the logo and text */
+.wpo-site-header .navbar-header .navbar-brand {
+  display: block;
+  text-align: center; /* Center the entire brand link */
+}
+
+.wpo-site-header .navbar-header .navbar-brand h2 {
+  margin: 0;
+  color: #ffffff; /* Set to white to match the image */
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2; /* Better for text wrapping */
+}
+
+.wpo-site-header .navbar-header .navbar-brand p {
+  margin: 0;
+  color: #ffffff; /* Set to white to match the image */
+  font-size: 14px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 767px) {
+  .wpo-site-header .navbar-header .navbar-brand h2 {
+      font-size: 28px; /* Reduce font size for smaller screens */
+  }
+  .wpo-site-header .navbar-header .navbar-brand p {
+      font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 440px) {
+  .wpo-site-header .navbar-header .navbar-brand h2 {
+      font-size: 22px; /* Further reduce font size for very small screens */
+  }
+  .wpo-site-header .navbar-header .navbar-brand p {
+      font-size: 10px; /* Further reduce font size */
+  }
+  .wpo-site-header .navbar-header .navbar-brand img {
+      max-width: 170px;
+  }
+}
