@@ -3426,7 +3426,7 @@ hero slider
   font-size: 20px;
   color: #fff;
   margin: 0;
-  text-transform: uppercase;
+  text-transform:capitalize;
   position: relative;
   font-family: "Manrope", sans-serif;
 }
