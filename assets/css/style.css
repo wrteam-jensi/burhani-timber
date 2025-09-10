@@ -2822,7 +2822,7 @@ hero slider
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height: 500px;
   }
 }
