@@ -2719,7 +2719,7 @@ a:hover {
 hero slider
 --------------------------------------------------------------*/
 .wpo-hero-section-1 {
-  background: url(../images/front13.png);
+  background: url(../images/front13.webp);
   height: 1050px;
   position: relative;
   display: block;
@@ -2747,7 +2747,7 @@ hero slider
 
 @media (max-width: 991px) {
   .wpo-hero-section-1 {
-    background: url(../images/front13.png);
+    background: url(../images/front13.webp);
        
     background-size: 100% 100%;
     background-position: center;
@@ -2763,7 +2763,7 @@ hero slider
   /* Specific responsive fix for 761px to 931px range */
 @media (min-width: 761px) and (max-width: 931px) {
   .wpo-hero-section-1 {
-    background: url(../images/front13.png);
+    background: url(../images/front13.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2805,7 +2805,7 @@ hero slider
 
 @media (max-width: 767px) {
   .wpo-hero-section-1 {
-        background: url(../images/front13.png);
+        background: url(../images/front13.webp);
        
         background-size: 100% 100%;
         background-position: center;
@@ -2818,7 +2818,7 @@ hero slider
 
 @media (max-width: 575px) {
   .wpo-hero-section-1 {
-    background: url(../images/front13.png); 
+    background: url(../images/front13.webp); 
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
