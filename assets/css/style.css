@@ -3609,7 +3609,7 @@ hero slider
 
 .wpo-features-section,
 .wpo-features-section-s2 {
-  background: #fff;
+  background: #F0EDDE;
   margin-top: -150px;
   z-index: 99;  
   position: relative;
@@ -3635,7 +3635,7 @@ hero slider
   width: 120%;
   height: 120%;
   content: "";
-  background: #fff;
+  background: #F0EDDE;
   z-index: -1;
   border-radius: 50%;
 }
@@ -3794,6 +3794,7 @@ hero slider
   border-radius: 15px;
   justify-content: center;
   overflow: hidden;
+  
 }
 .wpo-work-section .wpo-work-wrap .wpo-work-item:before {
   position: absolute;
@@ -3805,6 +3806,7 @@ hero slider
   background: rgba(255, 255, 255, 0.05);
   z-index: -1;
   border-radius: 50%;
+  
 }
 .wpo-work-section .wpo-work-wrap .wpo-work-item .wpo-work-icon {
   margin-right: 20px;
